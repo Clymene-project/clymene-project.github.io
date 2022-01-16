@@ -25,6 +25,10 @@ jobs:
         with:
           hugo-version: '0.92.0'
           extended: true
+#      - uses: actions/setup-node@v2
+#        with:
+#          node-version: '16.13.2'
+#          registry-url: 'https://npm.pkg.github.com'
 
       - name: Build hugo
         run: hugo --gc --minify
