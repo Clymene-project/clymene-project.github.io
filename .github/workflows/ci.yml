@@ -10,21 +10,21 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  deploy:
+    runs-on: ubuntu-20.04
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.92.0'
+          hugo-version: 'latest'
           extended: true
+
       - uses: actions/setup-node@v2
         with:
           node-version: '16.13.2'
@@ -32,24 +32,19 @@ jobs:
 
       - run: npm install -D --save autoprefixer
       - run: npm install -D --save postcss-cli
-      - run: git submodule update --init --recursive
+#      - run: git submodule update --init --recursive
 
       - name: Build hugo
         run: hugo --gc --minify
 
-      - name: Git init
-        run: |
-          git config --global user.name '${{github.actor}}'
-          git config --global user.email '${{github.actor}}@users.noreply.github.com'
+#      - name: Git init
+#        run: |
+#          git config --global user.name '${{github.actor}}'
+#          git config --global user.email '${{github.actor}}@users.noreply.github.com'
 
-      - name: Git add
-        run: git add --force public/
-
-      - name: Git commit
-        run: git commit -m "publish"
-
-      - name: Push public to branch
-        run: |
-          git subtree split --branch public --prefix public/
-          git push -f origin public:public
-          git branch -D public
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/master'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
