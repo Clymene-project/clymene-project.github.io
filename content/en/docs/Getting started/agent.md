@@ -1,13 +1,12 @@
 ---
 categories: ["Examples"]
 tags: ["test", "sample", "docs"]
-title: "Clymene Agent"
+title: "Clymene-agent Getting Start"
 linkTitle: "Clymene Agent"
 date: 2017-01-18
 description: >
   The Clymene-agent is service that collects time series data
 ---
-# Clymene-agent Getting Start
 The Clymene-agent is service that collects time series data(does not use disks)  
 
 ### How to create a scrape target setting yaml

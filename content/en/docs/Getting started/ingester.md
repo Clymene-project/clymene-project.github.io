@@ -1,14 +1,12 @@
 ---
 categories: ["Examples"]
 tags: ["test", "sample", "docs"]
-title: "Clymene Ingester"
+title: "Clymene Ingester Getting Start"
 linkTitle: "Clymene Ingester"
 date: 2017-01-05
 description: >
   The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database
 ---
-# Clymene Ingester Getting Start
-
 The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database  
 
 1. Kafka message consume
