@@ -3,9 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.92.0">
-<link rel=canonical type=text/html href=/docs/getting-started/>
-<link rel=alternate type=application/rss+xml href=/docs/getting-started/index.xml>
-<meta name=robots content="noindex, nofollow">
+<meta name=robots content="index, follow">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -16,27 +14,33 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Getting Started | Clymene-project</title>
-<meta name=description content="Introducing how to use Clymene's component.
-">
-<meta property="og:title" content="Getting Started">
-<meta property="og:description" content="Introducing how to use Clymene's component.
-">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/docs/getting-started/"><meta property="og:site_name" content="Clymene-project">
-<meta itemprop=name content="Getting Started">
-<meta itemprop=description content="Introducing how to use Clymene's component.
-"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Getting Started">
-<meta name=twitter:description content="Introducing how to use Clymene's component.
-">
+<title>Clymene Agent | Clymene-project</title>
+<meta name=description content="Clymene-agent Getting Start
+The Clymene-agent is service that collects time series data(does not use disks)
+How to create a scrape target setting yaml …">
+<meta property="og:title" content="Clymene Agent">
+<meta property="og:description" content="Clymene-agent Getting Start The Clymene-agent is service that collects time series data(does not use disks)
+How to create a scrape target setting yaml  Config file Option  clymene-agent --config.file=/etc/clymene/clymene.yml How to write yaml - See Prometheus Configuration for more information  global:scrape_interval:15s# Set the scrape interval to every 15 seconds. Default is every 1 minute. evaluation_interval:15s# Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:- job_name:'localhost'static_configs:- targets:['localhost:9100']- job_name:'kubernetes-kubelet'scheme:https tls_config:ca_file:/var/run/secrets/kubernetes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/getting-started/agent/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2017-01-18T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-01-18T08:18:22+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta itemprop=name content="Clymene Agent">
+<meta itemprop=description content="Clymene-agent Getting Start The Clymene-agent is service that collects time series data(does not use disks)
+How to create a scrape target setting yaml  Config file Option  clymene-agent --config.file=/etc/clymene/clymene.yml How to write yaml - See Prometheus Configuration for more information  global:scrape_interval:15s# Set the scrape interval to every 15 seconds. Default is every 1 minute. evaluation_interval:15s# Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:- job_name:'localhost'static_configs:- targets:['localhost:9100']- job_name:'kubernetes-kubelet'scheme:https tls_config:ca_file:/var/run/secrets/kubernetes."><meta itemprop=datePublished content="2017-01-18T00:00:00+00:00">
+<meta itemprop=dateModified content="2022-01-18T08:18:22+09:00">
+<meta itemprop=wordCount content="145">
+<meta itemprop=keywords content="test,sample,docs,"><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Clymene Agent">
+<meta name=twitter:description content="Clymene-agent Getting Start The Clymene-agent is service that collects time series data(does not use disks)
+How to create a scrape target setting yaml  Config file Option  clymene-agent --config.file=/etc/clymene/clymene.yml How to write yaml - See Prometheus Configuration for more information  global:scrape_interval:15s# Set the scrape interval to every 15 seconds. Default is every 1 minute. evaluation_interval:15s# Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:- job_name:'localhost'static_configs:- targets:['localhost:9100']- job_name:'kubernetes-kubelet'scheme:https tls_config:ca_file:/var/run/secrets/kubernetes.">
 <link rel=preload href=/scss/main.min.704093cd1a56f37fd00dc35c7125fced09d88d60c92d59965b30c8c0eeef1cd5.css as=style>
 <link href=/scss/main.min.704093cd1a56f37fd00dc35c7125fced09d88d60c92d59965b30c8c0eeef1cd5.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -58,35 +62,104 @@
 <div class="container-fluid td-outer">
 <div class=td-main>
 <div class="row flex-xl-nowrap">
-<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
-<div class=td-content>
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-This is the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.
-</p><p>
-<a href=/docs/getting-started/>Return to the regular view of this page</a>.
-</p>
-</div>
-<h1 class=title>Getting Started</h1>
-<div class=lead>Introducing how to use Clymene&rsquo;s component.</div>
-<ul>
-<li>1: <a href=#pg-c211710cbee0593bb38d25f7975e1194>Clymene Agent</a></li>
-<li>2: <a href=#pg-c5ce9be0274b23a88dee6db6cf3437ab>Clymene Gateway</a></li>
-<li>3: <a href=#pg-637872d485c9581998ef23e19c928de0>Clymene Ingester</a></li>
+<aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<div id=td-sidebar-menu class=td-sidebar__inner>
+<form class="td-sidebar__search d-flex align-items-center">
+<button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
+</button>
+</form>
+<nav class="collapse td-sidebar-nav" id=td-section-nav>
+<ul class="td-sidebar-nav__section pr-md-3 ul-0">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docs-li>
+<a href=/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-docs><span>Documentation</span></a>
+<ul class=ul-1>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsoverview-li>
+<a href=/docs/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsoverview><span>Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docsgetting-started-li>
+<a href=/docs/getting-started/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-started><span>Getting Started</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsgetting-startedagent-li>
+<a href=/docs/getting-started/agent/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedagent><span class=td-sidebar-nav-active-item>Clymene Agent</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsgetting-startedgateway-li>
+<a href=/docs/getting-started/gateway/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedgateway><span>Clymene Gateway</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsgetting-startedingester-li>
+<a href=/docs/getting-started/ingester/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedingester><span>Clymene Ingester</span></a>
+</li>
 </ul>
-<div class=content>
-<p>The Clymene project offers both Docker images and binary forms. Accordingly, metrics can be collected in various environments such as the kubernetes environment and Openstack.
-Getting Started introduces how to use each component.</p>
-<h2 id=download>Download</h2>
-<p>First, download Clymene according to the OS version
-<a href=https://github.com/Clymene-project/Clymene/releases>Download link</a></p>
-<h2 id=try-it-out>Try it out!</h2>
-<p>Look at how to use each Clymene component and follow it.</p>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsdatabase-options-li>
+<a href=/docs/database-options/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsdatabase-options><span>Database Options</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionscortex-li>
+<a href=/docs/database-options/cortex/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionscortex><span>Cortex Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionselasticsearch-li>
+<a href=/docs/database-options/elasticsearch/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionselasticsearch><span>ElasticSearch Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsinfluxdb-li>
+<a href=/docs/database-options/influxdb/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsinfluxdb><span>InfluxDB Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionskafka-li>
+<a href=/docs/database-options/kafka/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionskafka><span>Kafka Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsopentsdb-li>
+<a href=/docs/database-options/opentsdb/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsopentsdb><span>OpenTSDB Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsprometheus-li>
+<a href=/docs/database-options/prometheus/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsprometheus><span>Prometheus Options</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docstutorials-li>
+<a href=/docs/tutorials/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docstutorials><span>Tutorials</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstutorialsdocker-compose-li>
+<a href=/docs/tutorials/docker-compose/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstutorialsdocker-compose><span>Docker-compose Example</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstutorialsk8s-li>
+<a href=/docs/tutorials/k8s/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstutorialsk8s><span>k8s(Kubernetes) Example</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docscontribution-guidelines-li>
+<a href=/docs/contribution-guidelines/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docscontribution-guidelines><span></span></a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
+</aside>
+<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href=https://github.com/Clymene-project/Clymene/releases/tree/master/content/en/docs/Getting%20started/agent.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+<a href=https://github.com/Clymene-project/Clymene/releases/edit/master/content/en/docs/Getting%20started/agent.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/Clymene-project/Clymene/releases/new/master/content/en/docs/Getting%20started/agent.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/Clymene-project/Clymene/releases/issues/new?title=Clymene%20Agent" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href=https://github.com/Clymene-project/Clymene/issues/new class=td-page-meta--project-issue target=_blank rel=noopener><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<a id=print href=/docs/getting-started/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-c211710cbee0593bb38d25f7975e1194>1 - Clymene Agent</h1>
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#how-to-create-a-scrape-target-setting-yaml>How to create a scrape target setting yaml</a></li>
+<li><a href=#how-to-set-up-the-storage-type>How to set up the Storage Type</a></li>
+<li><a href=#use-only-agent-architecture>Use only agent Architecture</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</aside>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<nav aria-label=breadcrumb class=td-breadcrumbs>
+<ol class=breadcrumb>
+<li class=breadcrumb-item>
+<a href=/docs/>Documentation</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/docs/getting-started/>Getting Started</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=/docs/getting-started/agent/>Clymene Agent</a>
+</li>
+</ol>
+</nav>
+<div class=td-content>
+<h1>Clymene Agent</h1>
+<header class=article-meta>
+</header>
 <h1 id=clymene-agent-getting-start>Clymene-agent Getting Start</h1>
 <p>The Clymene-agent is service that collects time series data(does not use disks)</p>
 <h3 id=how-to-create-a-scrape-target-setting-yaml>How to create a scrape target setting yaml</h3>
@@ -152,112 +225,9 @@ Getting Started introduces how to use each component.</p>
 </ul>
 <h3 id=use-only-agent-architecture>Use only agent Architecture</h3>
 <img src=https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png width=100% height=100% alt=architecture_v1.3.0>
+<div class="text-muted mt-5 pt-3 border-top">
+Last modified January 18, 2022: <a href=https://github.com/Clymene-project/Clymene/releases/commit/05960440c63118c6c20aa8f6c8b6c4991c3d1b24>#29 | Write the contents of the official document. (0596044)</a>
 </div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-c5ce9be0274b23a88dee6db6cf3437ab>2 - Clymene Gateway</h1>
-<h1 id=clymene-gateway-getting-start>Clymene Gateway Getting Start</h1>
-<p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC communication.</p>
-<ol>
-<li>gRPC Service</li>
-<li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)</li>
-</ol>
-<h3 id=how-to-setting-grpc-server>How to setting gRPC server</h3>
-<pre tabindex=0><code>--gateway.grpc-server.host-port string      The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &quot;:15610&quot;)
---gateway.grpc.tls.cert string              Path to a TLS Certificate file, used to identify this server to clients
---gateway.grpc.tls.client-ca string         Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
---gateway.grpc.tls.enabled                  Enable TLS on the server
---gateway.grpc.tls.key string               Path to a TLS Private Key file, used to identify this server to clients
-</code></pre><h3 id=how-to-set-up-the-storage-type>How to set up the Storage Type</h3>
-<h5 id=1-setting-environmental-variables>1. Setting environmental variables</h5>
-<p>ElasticSearch</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch
-</code></pre><p>Kafka</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=kafka
-</code></pre><p>prometheus</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=prometheus
-</code></pre><p>cortex</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=cortex
-</code></pre><p>opentsdb</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=opentsdb
-</code></pre><p>influxdb</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=influxdb
-</code></pre><p>Several</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
-</code></pre><h5 id=2-option-description-by-storage-type>2. Option description by storage type</h5>
-<ul>
-<li><a href=http://clymene-project.github.io/docs/database-options/kafka>Kafka option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/elasticsearch>ElasticSearch option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/prometheus>Prometheus option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/cortex>cortex option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/gateway>gateway option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/opentsdb>Opentsdb option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/influxdb>influxdb option</a></li>
-</ul>
-<h3 id=use-gateway-architecture>Use gateway Architecture</h3>
-<img src=https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png width=100% height=100% alt=architecture_v1.3.0_gateway>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-637872d485c9581998ef23e19c928de0>3 - Clymene Ingester</h1>
-<h1 id=clymene-ingester-getting-start>Clymene Ingester Getting Start</h1>
-<p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database</p>
-<ol>
-<li>Kafka message consume</li>
-<li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)</li>
-</ol>
-<h3 id=how-to-setting-kafka-consumer>How to setting kafka consumer</h3>
-<pre tabindex=0><code>--kafka.consumer.authentication string          Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &quot;none&quot;)
---kafka.consumer.brokers string                 The comma-separated list of kafka brokers. i.e. '127.0.0.1:9092,0.0.0:1234' (default &quot;127.0.0.1:9092&quot;)
---kafka.consumer.client-id string               The Consumer Client ID that clymene-ingester will use (default &quot;clymene&quot;)
---kafka.consumer.encoding string                The encoding of metrics (&quot;json&quot;, &quot;protobuf&quot;) consumed from kafka (default &quot;protobuf&quot;)
---kafka.consumer.group-id string                The Consumer Group that clymene-ingester will be consuming on behalf of (default &quot;clymene&quot;)
---kafka.consumer.kerberos.config-file string    Path to Kerberos configuration. i.e /etc/krb5.conf (default &quot;/etc/krb5.conf&quot;)
---kafka.consumer.kerberos.keytab-file string    Path to keytab file. i.e /etc/security/kafka.keytab (default &quot;/etc/security/kafka.keytab&quot;)
---kafka.consumer.kerberos.password string       The Kerberos password used for authenticate with KDC
---kafka.consumer.kerberos.realm string          Kerberos realm
---kafka.consumer.kerberos.service-name string   Kerberos service name (default &quot;kafka&quot;)
---kafka.consumer.kerberos.use-keytab            Use of keytab instead of password, if this is true, keytab file will be used instead of password
---kafka.consumer.kerberos.username string       The Kerberos username used for authenticate with KDC
---kafka.consumer.plaintext.mechanism string     The plaintext Mechanism for SASL/PLAIN authentication, e.g. 'SCRAM-SHA-256' or 'SCRAM-SHA-512' or 'PLAIN' (default &quot;PLAIN&quot;)
---kafka.consumer.plaintext.password string      The plaintext Password for SASL/PLAIN authentication
---kafka.consumer.plaintext.username string      The plaintext Username for SASL/PLAIN authentication
---kafka.consumer.protocol-version string        Kafka protocol version - must be supported by kafka server
---kafka.consumer.tls.ca string                  Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
---kafka.consumer.tls.cert string                Path to a TLS Certificate file, used to identify this process to the remote server(s)
---kafka.consumer.tls.enabled                    Enable TLS when talking to the remote server(s)
---kafka.consumer.tls.key string                 Path to a TLS Private Key file, used to identify this process to the remote server(s)
---kafka.consumer.tls.server-name string         Override the TLS server name we expect in the certificate of the remote server(s)
---kafka.consumer.tls.skip-host-verify           (insecure) Skip server's certificate chain and host name verification
---kafka.consumer.topic string                   The name of the kafka topic to consume from (default &quot;clymene&quot;)
-</code></pre><h3 id=how-to-set-up-the-storage-type>How to set up the Storage Type</h3>
-<h5 id=1-setting-environmental-variables>1. Setting environmental variables</h5>
-<p>ElasticSearch</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch
-</code></pre><p>Kafka</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=kafka
-</code></pre><p>prometheus</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=prometheus
-</code></pre><p>cortex</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=cortex
-</code></pre><p>gateway</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=gateway
-</code></pre><p>opentsdb</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=opentsdb
-</code></pre><p>influxdb</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=influxdb
-</code></pre><p>Several</p>
-<pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
-</code></pre><h5 id=2-option-description-by-storage-type>2. Option description by storage type</h5>
-<ul>
-<li><a href=http://clymene-project.github.io/docs/database-options/kafka>Kafka option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/elasticsearch>ElasticSearch option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/prometheus>Prometheus option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/cortex>cortex option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/gateway>gateway option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/opentsdb>Opentsdb option</a></li>
-<li><a href=http://clymene-project.github.io/docs/database-options/influxdb>influxdb option</a></li>
-</ul>
-<h3 id=including-kafka-and-ingester-architecture>Including kafka and ingester Architecture</h3>
-<img src=https://user-images.githubusercontent.com/25188468/148680487-de5b083d-024e-4aaa-aeac-d362bbcec8de.png width=100% height=100% alt=architecture_v1.3.0_ingester>
 </div>
 </main>
 </div>
