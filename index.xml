@@ -1,13 +1,11 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Clymene-project</title><link>/</link><description>Recent content on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Changes by Version</title><link>/blog/2022/01/10/changes-by-version/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/10/changes-by-version/</guid><description>
-&lt;h2 id="131-2022-01-10">1.3.1 (2022-01-10)&lt;/h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Clymene-project</title><link>/</link><description>Recent content on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 1.3.1 (2022-01-10)</title><link>/blog/2022/01/10/1.3.1-2022-01-10/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/10/1.3.1-2022-01-10/</guid><description>
 &lt;p>Clymene official logo added!
 Creating metrics for Clymene components issue: #33&lt;/p>
 &lt;ul>
 &lt;li>clymene-agent metric port = :15691/metrics&lt;/li>
 &lt;li>clymene-ingester metric port = :15694/metrics&lt;/li>
 &lt;li>clymene-gateway metric port = :15690/metrics&lt;/li>
-&lt;/ul>
-&lt;h2 id="130-2022-01-08">1.3.0 (2022-01-08)&lt;/h2>
+&lt;/ul></description></item><item><title>Blog: 1.3.0 (2022-01-08)</title><link>/blog/2022/01/08/1.3.0-2022-01-08/</link><pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/08/1.3.0-2022-01-08/</guid><description>
 &lt;p>influxdb is now officially supported. The options below are mandatory.&lt;/p>
 &lt;pre tabindex="0">&lt;code>--influxdb.bucket string influx bucket, A bucket is a named location where time series data is stored
 --influxdb.org string influx organization, An organization is a workspace for a group of users.
@@ -16,27 +14,23 @@ Creating metrics for Clymene components issue: #33&lt;/p>
 &lt;ul>
 &lt;li>influxdb option (TS_STORAGE_TYPE=influxdb)&lt;/li>
 &lt;li>&lt;a href="https://github.com/Clymene-project/Clymene/blob/master/docs/clymene-agent/influxdb/influxdb-options.md">Influxdb option&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="121-2022-01-01">1.2.1 (2022-01-01)&lt;/h2>
+&lt;/ul></description></item><item><title>Blog: 1.2.1 (2022-01-01)</title><link>/blog/2022/01/01/1.2.1-2022-01-01/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/01/1.2.1-2022-01-01/</guid><description>
 &lt;p>Separate the prometheus option and the cortex option to block confusion&lt;/p>
 &lt;ul>
 &lt;li>cortex option (TS_STORAGE_TYPE=cortex)&lt;/li>
 &lt;li>&lt;a href="https://github.com/Clymene-project/Clymene/blob/master/docs/clymene-agent/cortex/cortex-option.md">Cortex option&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="120-2021-12-29">1.2.0 (2021-12-29)&lt;/h2>
+&lt;/ul></description></item><item><title>Blog: 1.2.0 (2021-12-29)</title><link>/blog/2021/12/29/1.2.0-2021-12-29/</link><pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate><guid>/blog/2021/12/29/1.2.0-2021-12-29/</guid><description>
 &lt;p>Now, you can use the opentsdb in Clymene.&lt;/p>
 &lt;ul>
 &lt;li>opentsdb support (TS_STORAGE_TYPE=opentsdb)&lt;/li>
 &lt;li>opentsdb supports two methods: socket(default) and
 http(&lt;a href="https://github.com/Clymene-project/Clymene/blob/master/docs/clymene-agent/opentsdb/opentsdb-option.md">Opentsdb option&lt;/a>)&lt;/li>
-&lt;/ul>
-&lt;h2 id="110-2021-12-20">1.1.0 (2021-12-20)&lt;/h2>
+&lt;/ul></description></item><item><title>Blog: 1.1.0 (2021-12-20)</title><link>/blog/2021/12/20/1.1.0-2021-12-20/</link><pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate><guid>/blog/2021/12/20/1.1.0-2021-12-20/</guid><description>
 &lt;p>A gateway supporting gRPC communication has been added.&lt;br>
 Try using it in various architectures.&lt;/p>
 &lt;ul>
 &lt;li>gRPC support (TS_STORAGE_TYPE=gateway)&lt;/li>
-&lt;/ul>
-&lt;h2 id="100-2021-12-12">1.0.0 (2021-12-12)&lt;/h2>
+&lt;/ul></description></item><item><title>Blog: 1.0.0 (2021-12-12)</title><link>/blog/2021/12/12/1.0.0-2021-12-12/</link><pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate><guid>/blog/2021/12/12/1.0.0-2021-12-12/</guid><description>
 &lt;p>Use kafka with clymene-agent and clymene-ingester.&lt;br>
 With only clymene-agent, you can collect timeseries of various environments and store them in DB. Composite writer
 implementation allows simultaneous storage in prometheus and elasticsearch.&lt;/p>

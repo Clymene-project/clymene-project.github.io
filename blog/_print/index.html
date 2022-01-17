@@ -74,7 +74,12 @@ This is the multi-page printable view of this section.
 <ul>
 <li><a href=#pg-fbc771f2981eed29c0bc016b2d68a41a>New Releases</a></li>
 <ul>
-<li><a href=#pg-9f3c205d95b305cd86037f364aed9ce4>Changes by Version</a></li>
+<li><a href=#pg-f4cfd333cb65cb5546b712cc480ea757>1.3.1 (2022-01-10)</a></li>
+<li><a href=#pg-d210d94af5a6ed13a9e2cafb6d533887>1.3.0 (2022-01-08)</a></li>
+<li><a href=#pg-91d6f66664cbd7fcd6958c4859bf04bf>1.2.1 (2022-01-01)</a></li>
+<li><a href=#pg-8b0922e35f4126e5c5744f8ee6fd5177>1.2.0 (2021-12-29)</a></li>
+<li><a href=#pg-ab29d9634282c1453a52690f98c5e9c0>1.1.0 (2021-12-20)</a></li>
+<li><a href=#pg-89401052a72d7fc206f47d99e01a1e5d>1.0.0 (2021-12-12)</a></li>
 </ul>
 </ul>
 <div class=content>
@@ -88,11 +93,10 @@ This is the multi-page printable view of this section.
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-9f3c205d95b305cd86037f364aed9ce4>Changes by Version</h1>
+<h1 id=pg-f4cfd333cb65cb5546b712cc480ea757>1.3.1 (2022-01-10)</h1>
 <div class="td-byline mb-4">
 <time datetime=2022-01-10 class=text-muted>Monday, January 10, 2022</time>
 </div>
-<h2 id=131-2022-01-10>1.3.1 (2022-01-10)</h2>
 <p>Clymene official logo added!
 Creating metrics for Clymene components issue: #33</p>
 <ul>
@@ -100,7 +104,12 @@ Creating metrics for Clymene components issue: #33</p>
 <li>clymene-ingester metric port = :15694/metrics</li>
 <li>clymene-gateway metric port = :15690/metrics</li>
 </ul>
-<h2 id=130-2022-01-08>1.3.0 (2022-01-08)</h2>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-d210d94af5a6ed13a9e2cafb6d533887>1.3.0 (2022-01-08)</h1>
+<div class="td-byline mb-4">
+<time datetime=2022-01-08 class=text-muted>Saturday, January 08, 2022</time>
+</div>
 <p>influxdb is now officially supported. The options below are mandatory.</p>
 <pre tabindex=0><code>--influxdb.bucket string    influx bucket, A bucket is a named location where time series data is stored
 --influxdb.org string       influx organization, An organization is a workspace for a group of users.
@@ -110,26 +119,46 @@ Creating metrics for Clymene components issue: #33</p>
 <li>influxdb option (TS_STORAGE_TYPE=influxdb)</li>
 <li><a href=https://github.com/Clymene-project/Clymene/blob/master/docs/clymene-agent/influxdb/influxdb-options.md>Influxdb option</a></li>
 </ul>
-<h2 id=121-2022-01-01>1.2.1 (2022-01-01)</h2>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-91d6f66664cbd7fcd6958c4859bf04bf>1.2.1 (2022-01-01)</h1>
+<div class="td-byline mb-4">
+<time datetime=2022-01-01 class=text-muted>Saturday, January 01, 2022</time>
+</div>
 <p>Separate the prometheus option and the cortex option to block confusion</p>
 <ul>
 <li>cortex option (TS_STORAGE_TYPE=cortex)</li>
 <li><a href=https://github.com/Clymene-project/Clymene/blob/master/docs/clymene-agent/cortex/cortex-option.md>Cortex option</a></li>
 </ul>
-<h2 id=120-2021-12-29>1.2.0 (2021-12-29)</h2>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-8b0922e35f4126e5c5744f8ee6fd5177>1.2.0 (2021-12-29)</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-12-29 class=text-muted>Wednesday, December 29, 2021</time>
+</div>
 <p>Now, you can use the opentsdb in Clymene.</p>
 <ul>
 <li>opentsdb support (TS_STORAGE_TYPE=opentsdb)</li>
 <li>opentsdb supports two methods: socket(default) and
 http(<a href=https://github.com/Clymene-project/Clymene/blob/master/docs/clymene-agent/opentsdb/opentsdb-option.md>Opentsdb option</a>)</li>
 </ul>
-<h2 id=110-2021-12-20>1.1.0 (2021-12-20)</h2>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-ab29d9634282c1453a52690f98c5e9c0>1.1.0 (2021-12-20)</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-12-20 class=text-muted>Monday, December 20, 2021</time>
+</div>
 <p>A gateway supporting gRPC communication has been added.<br>
 Try using it in various architectures.</p>
 <ul>
 <li>gRPC support (TS_STORAGE_TYPE=gateway)</li>
 </ul>
-<h2 id=100-2021-12-12>1.0.0 (2021-12-12)</h2>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-89401052a72d7fc206f47d99e01a1e5d>1.0.0 (2021-12-12)</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-12-12 class=text-muted>Sunday, December 12, 2021</time>
+</div>
 <p>Use kafka with clymene-agent and clymene-ingester.<br>
 With only clymene-agent, you can collect timeseries of various environments and store them in DB. Composite writer
 implementation allows simultaneous storage in prometheus and elasticsearch.</p>
