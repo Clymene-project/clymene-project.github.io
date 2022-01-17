@@ -63,7 +63,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png" width="100%" height="100%" alt="architecture_v1.3.0"></description></item><item><title>Docs: Clymene Gateway</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
+&lt;img src="https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png" width="70%" height="70%" alt="architecture_v1.3.0"></description></item><item><title>Docs: Clymene Gateway</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
 &lt;h1 id="clymene-gateway-getting-start">Clymene Gateway Getting Start&lt;/h1>
 &lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC communication.&lt;/p>
 &lt;ol>
@@ -103,7 +103,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="100%" height="100%" alt="architecture_v1.3.0_gateway"></description></item><item><title>Docs: Clymene Ingester</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
+&lt;img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="70%" height="70%" alt="architecture_v1.3.0_gateway"></description></item><item><title>Docs: Clymene Ingester</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
 &lt;h1 id="clymene-ingester-getting-start">Clymene Ingester Getting Start&lt;/h1>
 &lt;p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database&lt;/p>
 &lt;ol>
@@ -163,4 +163,4 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="including-kafka-and-ingester-architecture">Including kafka and ingester Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/148680487-de5b083d-024e-4aaa-aeac-d362bbcec8de.png" width="100%" height="100%" alt="architecture_v1.3.0_ingester"></description></item></channel></rss>
+&lt;img src="https://user-images.githubusercontent.com/25188468/148680487-de5b083d-024e-4aaa-aeac-d362bbcec8de.png" width="70%" height="70%" alt="architecture_v1.3.0_ingester"></description></item></channel></rss>
