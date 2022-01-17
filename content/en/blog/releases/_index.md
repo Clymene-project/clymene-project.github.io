@@ -1,7 +1,7 @@
 
 ---
 title: "New Releases"
-linkTitle: "Releases"
+linkTitle: "change logs"
 weight: 20
 ---
 
