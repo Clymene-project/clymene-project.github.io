@@ -92,4 +92,4 @@ TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple 
 
 
 ### Use only agent Architecture
-<img src="https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png" width="100%" height="100%" alt="architecture_v1.3.0">
+<img src="https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png" width="70%" height="70%" alt="architecture_v1.3.0">

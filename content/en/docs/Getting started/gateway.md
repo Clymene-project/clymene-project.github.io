@@ -66,4 +66,4 @@ TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple 
 
 
 ### Use gateway Architecture
-<img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="100%" height="100%" alt="architecture_v1.3.0_gateway">
+<img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="70%" height="70%" alt="architecture_v1.3.0_gateway">

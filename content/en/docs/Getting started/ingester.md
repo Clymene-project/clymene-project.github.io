@@ -104,5 +104,5 @@ TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple 
 - [influxdb option](http://clymene-project.github.io/docs/database-options/influxdb)
 
 ### Including kafka and ingester Architecture
-<img src="https://user-images.githubusercontent.com/25188468/148680487-de5b083d-024e-4aaa-aeac-d362bbcec8de.png" width="100%" height="100%" alt="architecture_v1.3.0_ingester">  
+<img src="https://user-images.githubusercontent.com/25188468/148680487-de5b083d-024e-4aaa-aeac-d362bbcec8de.png" width="70%" height="70%" alt="architecture_v1.3.0_ingester">  
 
