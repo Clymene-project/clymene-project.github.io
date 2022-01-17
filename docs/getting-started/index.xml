@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Getting Started</title><link>/docs/getting-started/</link><description>Recent content in Getting Started on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Clymene Agent</title><link>/docs/getting-started/agent/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/agent/</guid><description>
-&lt;h1 id="clymene-agent-getting-start">Clymene-agent Getting Start&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Getting Started</title><link>/docs/getting-started/</link><description>Recent content in Getting Started on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Clymene-agent Getting Start</title><link>/docs/getting-started/agent/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/agent/</guid><description>
 &lt;p>The Clymene-agent is service that collects time series data(does not use disks)&lt;/p>
 &lt;h3 id="how-to-create-a-scrape-target-setting-yaml">How to create a scrape target setting yaml&lt;/h3>
 &lt;ol>
@@ -63,8 +62,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png" width="70%" height="70%" alt="architecture_v1.3.0"></description></item><item><title>Docs: Clymene Gateway</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
-&lt;h1 id="clymene-gateway-getting-start">Clymene Gateway Getting Start&lt;/h1>
+&lt;img src="https://user-images.githubusercontent.com/25188468/148680397-aa9ca8a8-810c-4141-aefb-7e5d8ed87d13.png" width="70%" height="70%" alt="architecture_v1.3.0"></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
 &lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC communication.&lt;/p>
 &lt;ol>
 &lt;li>gRPC Service&lt;/li>
@@ -103,8 +101,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="70%" height="70%" alt="architecture_v1.3.0_gateway"></description></item><item><title>Docs: Clymene Ingester</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
-&lt;h1 id="clymene-ingester-getting-start">Clymene Ingester Getting Start&lt;/h1>
+&lt;img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="70%" height="70%" alt="architecture_v1.3.0_gateway"></description></item><item><title>Docs: Clymene Ingester Getting Start</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
 &lt;p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database&lt;/p>
 &lt;ol>
 &lt;li>Kafka message consume&lt;/li>
