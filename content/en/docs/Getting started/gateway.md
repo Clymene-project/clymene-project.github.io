@@ -4,6 +4,8 @@ tags: ["test", "sample", "docs"]
 title: "Clymene Gateway"
 linkTitle: "Clymene Gateway"
 date: 2017-01-05
+description: >
+  The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC communication
 ---
 # Clymene Gateway Getting Start
 
