@@ -105,7 +105,7 @@ weight = 1
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
-section = ["HTML", "print", "RSS"]
+section = ["HTML","RSS"]#, "print", "RSS"]
 
 [params]
 copyright = "The Clymene-project Authors"
@@ -133,9 +133,9 @@ version = "0.0"
 url_latest_version = "https://github.com/Clymene-project/Clymene/releases"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/Clymene-project/Clymene/releases"
+github_repo = "https://github.com/Clymene-project/clymene-project.github.io"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/Clymene-project/Clymene"
+github_project_repo = "https://github.com/Clymene-project/clymene-project.github.io"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
