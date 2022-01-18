@@ -5,3 +5,185 @@ weight: 5
 description: >
   How to use Clymene at k8s(kubernetes)
 ---
+You can configure various architectures using the Clymene component.
+
+### How to use clymene-agent k8s yaml
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clymene-agent
+  namespace: clymene
+  labels:
+    app: clymene-agent
+spec:
+  selector:
+    matchLabels:
+      app: clymene-agent
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: clymene-agent
+    spec:
+      containers:
+        - name: clymene-agent
+          image: bourbonkk/clymene-agent:v1.3.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 15691
+            - containerPort: 15692
+          args:
+            - --config.file=/etc/clymene/clymene.yml
+            - --kafka.producer.brokers=[KAFKA-BROKER]:9092
+            - --log-level=info
+            # - --gateway.grpc.host-port=clymene-gateway:15610
+          env:
+            - name: TS_STORAGE_TYPE
+              value: kafka
+#              value: gateway
+          volumeMounts:
+            - mountPath: /etc/clymene/
+              name: config-volume
+      volumes:
+        - name: config-volume
+          configMap:
+            name: clymene-agent-config
+      securityContext:
+        runAsUser: 1000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clymene-agent
+  namespace: clymene
+  labels:
+    app: clymene-agent
+spec:
+  ports:
+    - name: metric
+      port: 15691
+      targetPort: 15691
+    - name: admin
+      port: 15692
+      targetPort: 15692
+  selector:
+    app: clymene-agent
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clymene-agent-config
+  namespace: clymene
+data:
+  clymene.yml: |
+    global:
+      scrape_interval:     15s
+    scrape_configs:
+      - job_name: 'kubernetes-kubelet'
+        scheme: https
+        tls_config:
+          ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+        kubernetes_sd_configs:
+          - role: node
+        relabel_configs:
+          - action: labelmap
+            regex: __meta_kubernetes_node_label_(.+)
+          - target_label: __address__
+            replacement: kubernetes.default.svc:443
+          - source_labels: [__meta_kubernetes_node_name]
+            regex: (.+)
+            target_label: __metrics_path__
+            replacement: /api/v1/nodes/${1}/proxy/metrics
+```
+
+
+### How to use clymene-ingester Docker-compose
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clymene-ingester
+  namespace: clymene
+  labels:
+    app: clymene-ingester
+spec:
+  selector:
+    matchLabels:
+      app: clymene-ingester
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: clymene-ingester
+    spec:
+      containers:
+        - name: clymene-ingester
+          image: bourbonkk/clymene-ingester:v1.3.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 15694
+          args:
+            - --prometheus.remote.url=http://prometheus:9090/api/v1/write
+            - --log-level=info
+            - --kafka.consumer.brokers=clymene-kafka-broker:9092
+          env:
+            - name: TS_STORAGE_TYPE
+              value: prometheus
+      securityContext:
+        runAsUser: 1000
+
+```
+
+
+### How to use clymene-gateway Docker-compose
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clymene-gateway
+  namespace: clymene
+  labels:
+    app: clymene-gateway
+spec:
+  selector:
+    matchLabels:
+      app: clymene-gateway
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: clymene-gateway
+    spec:
+      containers:
+        - name: clymene-gateway
+          image: bourbonkk/clymene-gateway:v1.2.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 15610
+          args:
+            - --es.server-urls=http://[ELASTICSEARCH-IP]:9200
+            - --log-level=info
+          env:
+            - name: TS_STORAGE_TYPE
+              value: elasticsearch
+      securityContext:
+        runAsUser: 1000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clymene-gateway
+  namespace: clymene
+  labels:
+    app: clymene-gateway
+spec:
+  ports:
+    - name: grpc
+      port: 15610
+      targetPort: 15610
+#      type: NodePort
+  selector:
+    app: clymene-gateway
+```
