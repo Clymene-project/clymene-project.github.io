@@ -23,12 +23,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/tutorials/docker-compose/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2017-01-05T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-01-18T08:18:22+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-01-18T23:29:20+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="Docker-compose Example">
 <meta itemprop=description content="How to use Clymene at Docker Compose.
 "><meta itemprop=datePublished content="2017-01-05T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-01-18T08:18:22+09:00">
-<meta itemprop=wordCount content="0">
+<meta itemprop=dateModified content="2022-01-18T23:29:20+09:00">
+<meta itemprop=wordCount content="57">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Docker-compose Example">
 <meta name=twitter:description content="How to use Clymene at Docker Compose.
@@ -128,6 +128,17 @@
 <a href="https://github.com/Clymene-project/clymene-project.github.io/issues/new?title=Docker-compose%20Example" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 <a href=https://github.com/Clymene-project/clymene-project.github.io/issues/new class=td-page-meta--project-issue target=_blank rel=noopener><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
 </div>
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#how-to-use-clymene-agent-docker-compose>How to use clymene-agent Docker-compose</a></li>
+<li><a href=#how-to-use-clymene-ingester-docker-compose>How to use clymene-ingester Docker-compose</a></li>
+<li><a href=#how-to-use-clymene-gateway-docker-compose>How to use clymene-gateway Docker-compose</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <nav aria-label=breadcrumb class=td-breadcrumbs>
@@ -148,8 +159,54 @@
 <div class=lead>How to use Clymene at Docker Compose.</div>
 <header class=article-meta>
 </header>
+<p>You can configure various architectures using the Clymene component.</p>
+<h3 id=how-to-use-clymene-agent-docker-compose>How to use clymene-agent Docker-compose</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>version</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#4e9a06>&#39;2&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>services</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>clymene-agent</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>image</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>bourbonkk/clymene-agent:v1.3.1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>ports</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#4e9a06>&#34;15691:15691&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#4e9a06>&#34;15692:15692&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>environment</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#000>TS_STORAGE_TYPE=kafka</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic># database you want to use</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span><span style=color:#8f5902;font-style:italic># - TS_STORAGE_TYPE=gateway</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>volumes</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#000>./config/clymene_scrape_config.yml:/etc/clymene/clymene.yml</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>command</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>log-level=debug</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>kafka.producer.brokers=[KAFKA-IP]:9092</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span><span style=color:#8f5902;font-style:italic># - --gateway.grpc.host-port=localhost:15610</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div><h3 id=how-to-use-clymene-ingester-docker-compose>How to use clymene-ingester Docker-compose</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>version</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#4e9a06>&#39;2&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>services</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>clymene-ingester</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>image</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>bourbonkk/clymene-ingester:v1.3.1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>ports</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#4e9a06>&#34;15694:15694&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>environment</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span><span style=color:#8f5902;font-style:italic># - TS_STORAGE_TYPE=elasticsearch,prometheus   # use composite writer</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#000>TS_STORAGE_TYPE=elasticsearch</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>command</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>log-level=debug</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>kafka.consumer.brokers=[KAFKA-IP]:9092</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>es.server-urls=http://[ELASTICSEARCH-IP]:9200</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#8f5902;font-style:italic>#      - --prometheus.remote.url=http://prometheus:9090/api/v1/write</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div><h3 id=how-to-use-clymene-gateway-docker-compose>How to use clymene-gateway Docker-compose</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>version</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#4e9a06>&#39;2&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>services</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>clymene-ingester</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>image</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>bourbonkk/clymene-gateway:v1.3.1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>ports</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#4e9a06>&#34;15610:15610&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>environment</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- <span style=color:#000>TS_STORAGE_TYPE=elasticsearch</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>command</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>log-level=debug</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>      </span>- --<span style=color:#000>es.server-urls=http://[ELASTICSEARCH-IP]:9200</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 18, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/05960440c63118c6c20aa8f6c8b6c4991c3d1b24>#29 | Write the contents of the official document. (0596044)</a>
+Last modified January 18, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/2036f335b237f7ed0f963db61901ce21ddb300e2>#29 | add how to use docker-compose, k8s (2036f33)</a>
 </div>
 </div>
 </main>
