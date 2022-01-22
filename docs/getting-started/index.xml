@@ -49,6 +49,8 @@
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
@@ -89,6 +91,8 @@
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
@@ -149,6 +153,8 @@
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
