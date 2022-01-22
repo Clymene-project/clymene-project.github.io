@@ -48,6 +48,10 @@ influxdb
 ```
 TS_STORAGE_TYPE=influxdb
 ```
+tdengine
+```
+TS_STORAGE_TYPE=tdengine
+```
 Several
 ```
 TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.

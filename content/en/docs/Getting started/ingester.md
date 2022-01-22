@@ -85,7 +85,10 @@ influxdb
 ```
 TS_STORAGE_TYPE=influxdb
 ```
-
+tdengine
+```
+TS_STORAGE_TYPE=tdengine
+```
 Several
 
 ```
