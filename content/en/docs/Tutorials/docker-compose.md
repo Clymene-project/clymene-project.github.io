@@ -13,7 +13,7 @@ You can configure various architectures using the Clymene component.
 version: '2'
 services:
   clymene-agent:
-    image: bourbonkk/clymene-agent:v1.3.1
+    image: bourbonkk/clymene-agent:latest
     ports:
       - "15691:15691"
       - "15692:15692"
@@ -33,7 +33,7 @@ services:
 version: '2'
 services:
   clymene-ingester:
-    image: bourbonkk/clymene-ingester:v1.3.1
+    image: bourbonkk/clymene-ingester:latest
     ports:
       - "15694:15694"
     environment:
@@ -52,7 +52,7 @@ services:
 version: '2'
 services:
   clymene-ingester:
-    image: bourbonkk/clymene-gateway:v1.3.1
+    image: bourbonkk/clymene-gateway:latest
     ports:
       - "15610:15610"
     environment:

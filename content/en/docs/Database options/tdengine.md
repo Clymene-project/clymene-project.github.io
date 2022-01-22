@@ -10,7 +10,7 @@ description: >
 ### TDengine Options
 
 ```
---tdengine.dbname string         Destination database (default "test")
+--tdengine.dbname string         Destination database (default "clymene")
 --tdengine.hostname string       The host to connect to TDengine server. (default "127.0.0.1")
 --tdengine.max-sql-length int    Number of SQLs that can be sent at one time (default 4096)
 --tdengine.password string       The password to use when connecting to the server (default "taosdata")
