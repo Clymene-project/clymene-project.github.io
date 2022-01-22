@@ -61,7 +61,7 @@ TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple 
 - [gateway option](http://clymene-project.github.io/docs/database-options/gateway)
 - [Opentsdb option](http://clymene-project.github.io/docs/database-options/opentsdb)
 - [influxdb option](http://clymene-project.github.io/docs/database-options/influxdb)
-
+- [TDengine options](http://clymene-project.github.io/docs/database-options/tdengine)
 
 ### Use gateway Architecture
-<img src="https://user-images.githubusercontent.com/25188468/148680473-290f098e-fab6-4e87-a958-cdd96ff12a15.png" width="70%" height="70%" alt="architecture_v1.3.0_gateway">
+<img src="https://user-images.githubusercontent.com/25188468/150611990-61dc11df-1deb-4755-bf28-3a531bd77888.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway">
