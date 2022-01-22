@@ -132,4 +132,12 @@
 --prometheus.remote.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
 --prometheus.remote.url string the prometheus remote write receiver endpoint(/api/v1/write) (default &amp;quot;http://localhost:9090/api/v1/write&amp;quot;)
 --prometheus.remote.user.agent string User-Agent in request header (default &amp;quot;Prometheus/&amp;quot;)
+&lt;/code>&lt;/pre></description></item><item><title>Docs: TDengine Options</title><link>/docs/database-options/tdengine/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/tdengine/</guid><description>
+&lt;h3 id="tdengine-options">TDengine Options&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--tdengine.dbname string Destination database (default &amp;quot;test&amp;quot;)
+--tdengine.hostname string The host to connect to TDengine server. (default &amp;quot;127.0.0.1&amp;quot;)
+--tdengine.max-sql-length int Number of SQLs that can be sent at one time (default 4096)
+--tdengine.password string The password to use when connecting to the server (default &amp;quot;taosdata&amp;quot;)
+--tdengine.server-port int he HTTP port number to use for the connection to TDengine server (default 6041)
+--tdengine.user string The TDengine user name to use when connecting to the server (default &amp;quot;root&amp;quot;)
 &lt;/code>&lt;/pre></description></item></channel></rss>
