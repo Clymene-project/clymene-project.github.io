@@ -43,6 +43,16 @@ scrape_configs:
       replacement: /api/v1/nodes/${1}/proxy/metrics
 ```
 
+3. config file reload
+```yaml
+curl -XPOST http://clymene-agent:15692/api/reload
+
+# check clymene-agent logs
+  {"level":"info","ts":1643299385.1000407,"caller":"config/config.go:451","msg":"Loading configuration file","filename":"clymene_agent.yml"}
+  {"level":"info","ts":1643299385.1012235,"caller":"config/config.go:468","msg":"Completed loading of configuration file","filename":"clymene_agent.yml"}
+```
+
+
 ### How to set up the Storage Type
 ##### 1. Setting environmental variables
 
