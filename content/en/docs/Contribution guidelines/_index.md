@@ -1,141 +1,115 @@
-[//]: # (---)
+---
+title: "Contribution Guidelines"
+linkTitle: "Contribution Guidelines"
+weight: 10
+description: >
+  How to contribute to the docs
+---
 
-[//]: # (title: "Contribution Guidelines")
 
-[//]: # (linkTitle: "Contribution Guidelines")
+* New Contributor Guide
+    * [Ways to Contribute](#ways-to-contribute)
+    * [Find an Issue](#find-an-issue)
+    * [Ask for Help](#ask-for-help)
+    * [Development Environment Setup](#development-environment-setup)
+    * [Pull Request Checklist](#pull-request-checklist)
 
-[//]: # (weight: 10)
 
-[//]: # (description: >)
+Welcome! We are glad that you want to contribute to our project! 💖
 
-[//]: # (  How to contribute to the docs)
+As you get started, you are in the best position to give us feedback on areas of
+our project that we need help with including:
 
-[//]: # (---)
+* Problems found during setting up a new developer environment
+* Gaps in our Quickstart Guide or documentation
+* Bugs in our automation scripts
 
-[//]: # ()
-[//]: # ({{% pageinfo %}})
+If anything doesn't make sense, or doesn't work when you run it, please open a
+bug report and let us know!
 
-[//]: # (These basic sample guidelines assume that your Docsy site is deployed using Netlify and your files are stored in GitHub. You can use the guidelines "as is" or adapt them with your own instructions: for example, other deployment options, information about your doc project's file structure, project-specific review guidelines, versioning guidelines, or any other information your users might find useful when updating your site. [Kubeflow]&#40;https://github.com/kubeflow/website/blob/master/README.md&#41; has a great example.)
+## Ways to Contribute
 
-[//]: # ()
-[//]: # (Don't forget to link to your own doc repo rather than our example site! Also make sure users can find these guidelines from your doc repo README: either add them there and link to them from this page, add them here and link to them from the README, or include them in both locations.)
+We welcome many different types of contributions including:
 
-[//]: # ({{% /pageinfo %}})
+* New features
+* Builds, CI/CD
+* Bug fixes
+* Documentation
+* Issue Triage
+* Answering questions on Slack/Mailing List
+* Web design
+* Communications / Social Media / Blog Posts
+* Release management
 
-[//]: # ()
-[//]: # (We use [Hugo]&#40;https://gohugo.io/&#41; to format and generate our website, the)
 
-[//]: # ([Docsy]&#40;https://github.com/google/docsy&#41; theme for styling and site structure, )
+Not everything happens through a GitHub pull request. Please come to our
+[discussions](https://github.com/Clymene-project/Clymene/discussions) or contact us(clymeneallen@gmail.com) and let's discuss how we can work
+together.
 
-[//]: # (and [Netlify]&#40;https://www.netlify.com/&#41; to manage the deployment of the site. )
+## Find an Issue
 
-[//]: # (Hugo is an open-source static site generator that provides us with templates, )
+We have good first issues for new contributors and help wanted issues suitable
+for any contributor. [good first issue](https://github.com/Clymene-project/Clymene/labels/good%20first%20issue) has extra information to
+help you make your first contribution. [help wanted](https://github.com/Clymene-project/Clymene/labels/help%20wanted) are issues
+suitable for someone who isn't a core maintainer and is good to move onto after
+your first pull request.
 
-[//]: # (content organisation in a standard directory structure, and a website generation )
+Once you see an issue that you'd like to work on, please post a comment saying
+that you want to work on it. Something like "I want to work on this" is fine.
 
-[//]: # (engine. You write the pages in Markdown &#40;or HTML if you want&#41;, and Hugo wraps them up into a website.)
+## Ask for Help
 
-[//]: # ()
-[//]: # (All submissions, including submissions by project members, require review. We)
+The best way to reach us with a question when contributing is to ask on
 
-[//]: # (use GitHub pull requests for this purpose. Consult)
+* The original github issue
+* The developer mailing list(clymeneallan@gmail.com)
+* Our Slack channel(clymene-project.slack.com)
 
-[//]: # ([GitHub Help]&#40;https://help.github.com/articles/about-pull-requests/&#41; for more)
 
-[//]: # (information on using pull requests.)
+## Development Environment Setup
+```bash
+go mod vendor
+```
 
-[//]: # ()
-[//]: # (## Quick start with Netlify)
+Tidy up the `go.mod` and `go.sum` files:
 
-[//]: # ()
-[//]: # (Here's a quick guide to updating the docs. It assumes you're familiar with the)
+```bash
+go mod tidy
+go mod vendor
+git add go.mod go.sum vendor
+git commit
+```
 
-[//]: # (GitHub workflow and you're happy to use the automated preview of your doc)
 
-[//]: # (updates:)
+### Developer Certificates of Origin (DCOs)
+Licensing is important to open source projects. It provides some assurances that
+the software will continue to be available based under the terms that the
+author(s) desired. We require that contributors sign off on commits submitted to
+our project's repositories. The [Developer Certificate of Origin
+(DCO)](https://developercertificate.org/) is a way to certify that you wrote and
+have the right to contribute the code you are submitting to the project.
 
-[//]: # ()
-[//]: # (1. Fork the [Goldydocs repo]&#40;https://github.com/google/docsy-example&#41; on GitHub.)
+You sign-off by adding the following to your commit messages. Your sign-off must
+match the git user and email associated with the commit.
 
-[//]: # (1. Make your changes and send a pull request &#40;PR&#41;.)
+    This is my commit message
 
-[//]: # (1. If you're not yet ready for a review, add "WIP" to the PR name to indicate )
+    Signed-off-by: Your Name <your.name@example.com>
 
-[//]: # (  it's a work in progress. &#40;**Don't** add the Hugo property )
+Git has a `-s` command line option to do this automatically:
 
-[//]: # (  "draft = true" to the page front matter, because that prevents the )
+    git commit -s -m 'This is my commit message'
 
-[//]: # (  auto-deployment of the content preview described in the next point.&#41;)
+If you forgot to do this and have not yet pushed your changes to the remote
+repository, you can amend your commit with the sign-off by running
 
-[//]: # (1. Wait for the automated PR workflow to do some checks. When it's ready,)
+    git commit --amend -s 
 
-[//]: # (  you should see a comment like this: **deploy/netlify — Deploy preview ready!**)
 
-[//]: # (1. Click **Details** to the right of "Deploy preview ready" to see a preview)
+## Pull Request Checklist
 
-[//]: # (  of your updates.)
-
-[//]: # (1. Continue updating your doc and pushing your changes until you're happy with )
-
-[//]: # (  the content.)
-
-[//]: # (1. When you're ready for a review, add a comment to the PR, and remove any)
-
-[//]: # (  "WIP" markers.)
-
-[//]: # ()
-[//]: # (## Updating a single page)
-
-[//]: # ()
-[//]: # (If you've just spotted something you'd like to change while using the docs, Docsy has a shortcut for you:)
-
-[//]: # ()
-[//]: # (1. Click **Edit this page** in the top right hand corner of the page.)
-
-[//]: # (1. If you don't already have an up to date fork of the project repo, you are prompted to get one - click **Fork this repository and propose changes** or **Update your Fork** to get an up to date version of the project to edit. The appropriate page in your fork is displayed in edit mode.)
-
-[//]: # (1. Follow the rest of the [Quick start with Netlify]&#40;#quick-start-with-netlify&#41; process above to make, preview, and propose your changes.)
-
-[//]: # ()
-[//]: # (## Previewing your changes locally)
-
-[//]: # ()
-[//]: # (If you want to run your own local Hugo server to preview your changes as you work:)
-
-[//]: # ()
-[//]: # (1. Follow the instructions in [Getting started]&#40;/docs/getting-started&#41; to install Hugo and any other tools you need. You'll need at least **Hugo version 0.45** &#40;we recommend using the most recent available version&#41;, and it must be the **extended** version, which supports SCSS.)
-
-[//]: # (1. Fork the [Goldydocs repo]&#40;https://github.com/google/docsy-example&#41; repo into your own project, then create a local copy using `git clone`. Don’t forget to use `--recurse-submodules` or you won’t pull down some of the code you need to generate a working site.)
-
-[//]: # ()
-[//]: # (    ```)
-
-[//]: # (    git clone --recurse-submodules --depth 1 https://github.com/google/docsy-example.git)
-
-[//]: # (    ```)
-
-[//]: # ()
-[//]: # (1. Run `hugo server` in the site root directory. By default your site will be available at http://localhost:1313/. Now that you're serving your site locally, Hugo will watch for changes to the content and automatically refresh your site.)
-
-[//]: # (1. Continue with the usual GitHub workflow to edit files, commit them, push the)
-
-[//]: # (  changes up to your fork, and create a pull request.)
-
-[//]: # ()
-[//]: # (## Creating an issue)
-
-[//]: # ()
-[//]: # (If you've found a problem in the docs, but you're not sure how to fix it yourself, please create an issue in the [Goldydocs repo]&#40;https://github.com/google/docsy-example/issues&#41;. You can also create an issue about a specific page by clicking the **Create Issue** button in the top right hand corner of the page.)
-
-[//]: # ()
-[//]: # (## Useful resources)
-
-[//]: # ()
-[//]: # (* [Docsy user guide]&#40;https://www.docsy.dev/docs/&#41;: All about Docsy, including how it manages navigation, look and feel, and multi-language support.)
-
-[//]: # (* [Hugo documentation]&#40;https://gohugo.io/documentation/&#41;: Comprehensive reference for Hugo.)
-
-[//]: # (* [Github Hello World!]&#40;https://guides.github.com/activities/hello-world/&#41;: A basic introduction to GitHub concepts and workflow.)
-
-[//]: # ()
-[//]: # ()
+When you submit your pull request, or you push new commits to it, our automated
+systems will run some checks on your new code. We require that your pull request
+passes these checks, but we also have more criteria than just that before we can
+accept and merge it. We recommend that you check the following things locally
+before you submit your code:
