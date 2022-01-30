@@ -6,7 +6,7 @@
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">clymene-agent --config.file&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>/etc/clymene/clymene.yml
 &lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>How to write yaml - &lt;a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">See Prometheus Configuration for more information&lt;/a>&lt;/li>
+&lt;li>How to write yaml - &lt;a href="https://clymene-project.github.io/docs/service-discovery/">See Clymene Configuration for more information&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">global&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scrape_interval&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">15s&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Set the scrape interval to every 15 seconds. Default is every 1 minute. &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
