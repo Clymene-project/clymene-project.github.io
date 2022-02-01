@@ -52,7 +52,17 @@ curl -XPOST http://clymene-agent:15692/api/reload
   {"level":"info","ts":1643299385.1012235,"caller":"config/config.go:468","msg":"Completed loading of configuration file","filename":"clymene_agent.yml"}
 ```
 
+### How to setting gateway
 
+```
+--admin.http.host-ports string           The host:ports (e.g. 127.0.0.1:15691 or :15691) for the admin server, including health check, /metrics, etc. (default ":15691")
+--config.file string                     configuration file path. (default "/etc/clymene/clymene.yml")
+--enable.new-service-discovery-manager   use new service discovery manager (default true)
+--http.port int                          http port (default 15692)
+--log-level string                       Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default "info")
+--metrics-backend string                 Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default "prometheus")
+--metrics-http-route string              Defines the route of HTTP endpoint for metrics backends that support scraping (default "/metrics")
+```
 ### How to set up the Storage Type
 ##### 1. Setting environmental variables
 
