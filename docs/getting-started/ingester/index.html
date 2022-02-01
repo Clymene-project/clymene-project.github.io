@@ -23,12 +23,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/getting-started/ingester/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2017-01-05T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-01-22T10:36:55+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-02-01T21:42:38+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="Clymene Ingester Getting Start">
 <meta itemprop=description content="The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database
 "><meta itemprop=datePublished content="2017-01-05T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-01-22T10:36:55+09:00">
-<meta itemprop=wordCount content="392">
+<meta itemprop=dateModified content="2022-02-01T21:42:38+09:00">
+<meta itemprop=wordCount content="391">
 <meta itemprop=keywords content="test,sample,docs,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Clymene Ingester Getting Start">
 <meta name=twitter:description content="The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database
@@ -95,7 +95,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsdatabase-options-li>
 <a href=/docs/database-options/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsdatabase-options><span>Database Options</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionscortex-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsgateway-li>
+<a href=/docs/database-options/gateway/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsgateway><span>clymene-gateway Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionscortex-li>
 <a href=/docs/database-options/cortex/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionscortex><span>Cortex Options</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionselasticsearch-li>
 <a href=/docs/database-options/elasticsearch/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionselasticsearch><span>ElasticSearch Options</span></a>
@@ -141,7 +143,7 @@
 <ul>
 <li>
 <ul>
-<li><a href=#how-to-setting-kafka-consumer>How to setting kafka consumer</a></li>
+<li><a href=#how-to-setting-ingester>How to setting ingester</a></li>
 <li><a href=#how-to-set-up-the-storage-type>How to set up the Storage Type</a></li>
 <li><a href=#including-kafka-and-ingester-architecture>Including kafka and ingester Architecture</a></li>
 </ul>
@@ -173,7 +175,7 @@
 <li>Kafka message consume</li>
 <li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)</li>
 </ol>
-<h3 id=how-to-setting-kafka-consumer>How to setting kafka consumer</h3>
+<h3 id=how-to-setting-ingester>How to setting ingester</h3>
 <pre tabindex=0><code>--kafka.consumer.authentication string          Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &quot;none&quot;)
 --kafka.consumer.brokers string                 The comma-separated list of kafka brokers. i.e. '127.0.0.1:9092,0.0.0:1234' (default &quot;127.0.0.1:9092&quot;)
 --kafka.consumer.client-id string               The Consumer Client ID that clymene-ingester will use (default &quot;clymene&quot;)
@@ -231,7 +233,7 @@
 <h3 id=including-kafka-and-ingester-architecture>Including kafka and ingester Architecture</h3>
 <img src=https://user-images.githubusercontent.com/25188468/150611879-35855d02-0753-4f90-83fd-583c1e036c71.png width=70% height=70% alt=architecture_v1.4.0_ingester>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 22, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/563937814303e6b3c78aa2162f6001df5e55b027>#36 | v.1.4.0 release (5639378)</a>
+Last modified February 1, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/7922c088fc46d40a8437f08886b1a96679f0f4ec>#37 | add gateway http writer (7922c08)</a>
 </div>
 </div>
 </main>

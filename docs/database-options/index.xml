@@ -1,4 +1,20 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Database Options</title><link>/docs/database-options/</link><description>Recent content in Database Options on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/database-options/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Cortex Options</title><link>/docs/database-options/cortex/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/cortex/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Database Options</title><link>/docs/database-options/</link><description>Recent content in Database Options on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/database-options/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
+&lt;h3 id="clymene-gateway-options">clymene-gateway Options&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--gateway.grpc.discovery.min-peers int Max number of collectors to which the agent will try to connect at any given time (default 3)
+--gateway.grpc.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;quot;localhost:15610&amp;quot;)
+--gateway.grpc.retry.max uint Sets the maximum number of retries for a call (default 3)
+--gateway.grpc.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
+--gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
+--gateway.grpc.tls.enabled Enable TLS when talking to the remote server(s)
+--gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
+--gateway.grpc.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
+--gateway.grpc.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
+--gateway.http.max-err-msg-len int Maximum length of error message (default 256)
+--gateway.http.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
+--gateway.http.url string the clymene-gateway remote write HTTP receiver endpoint(/api/metrics) (default &amp;quot;http://localhost:15611/api/metrics&amp;quot;)
+--gateway.http.user.agent string User-Agent in request header (default &amp;quot;Clymene/&amp;quot;)
+--gateway.service-type string gateway service type(grpc or http) (default &amp;quot;grpc&amp;quot;)
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Cortex Options</title><link>/docs/database-options/cortex/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/cortex/</guid><description>
 &lt;h3 id="cortex-options">Cortex Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--cortex.distributor.kafka.encoding string Encoding of metric (&amp;quot;json&amp;quot; or &amp;quot;protobuf&amp;quot;) sent to kafka. (default &amp;quot;protobuf&amp;quot;)
 --cortex.distributor.max.err.msg.len int Maximum length of error message (default 256)

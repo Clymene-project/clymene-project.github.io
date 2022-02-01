@@ -23,12 +23,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/getting-started/agent/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2017-01-18T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-01-30T16:07:37+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-02-01T21:42:38+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="Clymene-agent Getting Start">
 <meta itemprop=description content="The Clymene-agent is service that collects time series data
 "><meta itemprop=datePublished content="2017-01-18T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-01-30T16:07:37+09:00">
-<meta itemprop=wordCount content="160">
+<meta itemprop=dateModified content="2022-02-01T21:42:38+09:00">
+<meta itemprop=wordCount content="249">
 <meta itemprop=keywords content="test,sample,docs,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Clymene-agent Getting Start">
 <meta name=twitter:description content="The Clymene-agent is service that collects time series data
@@ -95,7 +95,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsdatabase-options-li>
 <a href=/docs/database-options/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsdatabase-options><span>Database Options</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionscortex-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsgateway-li>
+<a href=/docs/database-options/gateway/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsgateway><span>clymene-gateway Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionscortex-li>
 <a href=/docs/database-options/cortex/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionscortex><span>Cortex Options</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionselasticsearch-li>
 <a href=/docs/database-options/elasticsearch/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionselasticsearch><span>ElasticSearch Options</span></a>
@@ -142,6 +144,7 @@
 <li>
 <ul>
 <li><a href=#how-to-create-a-scrape-target-setting-yaml>How to create a scrape target setting yaml</a></li>
+<li><a href=#how-to-setting-gateway>How to setting gateway</a></li>
 <li><a href=#how-to-set-up-the-storage-type>How to set up the Storage Type</a></li>
 <li><a href=#use-only-agent-architecture>Use only agent Architecture</a></li>
 </ul>
@@ -210,7 +213,15 @@
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#8f5902;font-style:italic># check clymene-agent logs</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span>{<span style=color:#4e9a06>&#34;level&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;info&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;ts&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#0000cf;font-weight:700>1643299385.1000407</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;caller&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;config/config.go:451&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;msg&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;Loading configuration file&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;filename&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;clymene_agent.yml&#34;</span>}<span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span>{<span style=color:#4e9a06>&#34;level&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;info&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;ts&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#0000cf;font-weight:700>1643299385.1012235</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;caller&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;config/config.go:468&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;msg&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;Completed loading of configuration file&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;filename&#34;</span><span style=color:#000;font-weight:700>:</span><span style=color:#4e9a06>&#34;clymene_agent.yml&#34;</span>}<span style=color:#f8f8f8;text-decoration:underline>
-</span></code></pre></div><h3 id=how-to-set-up-the-storage-type>How to set up the Storage Type</h3>
+</span></code></pre></div><h3 id=how-to-setting-gateway>How to setting gateway</h3>
+<pre tabindex=0><code>--admin.http.host-ports string           The host:ports (e.g. 127.0.0.1:15691 or :15691) for the admin server, including health check, /metrics, etc. (default &quot;:15691&quot;)
+--config.file string                     configuration file path. (default &quot;/etc/clymene/clymene.yml&quot;)
+--enable.new-service-discovery-manager   use new service discovery manager (default true)
+--http.port int                          http port (default 15692)
+--log-level string                       Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &quot;info&quot;)
+--metrics-backend string                 Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &quot;prometheus&quot;)
+--metrics-http-route string              Defines the route of HTTP endpoint for metrics backends that support scraping (default &quot;/metrics&quot;)
+</code></pre><h3 id=how-to-set-up-the-storage-type>How to set up the Storage Type</h3>
 <h5 id=1-setting-environmental-variables>1. Setting environmental variables</h5>
 <p>ElasticSearch</p>
 <pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch
@@ -244,7 +255,7 @@
 <h3 id=use-only-agent-architecture>Use only agent Architecture</h3>
 <img src=https://user-images.githubusercontent.com/25188468/150611946-c3f07298-03ee-42ba-8937-9da22735da45.png width=70% height=70% alt=architecture_v1.4.0>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 30, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/3c4b0c3dccf0d78b9067c3d79175efac04e5e507>#38 | Release v1.5.0 (3c4b0c3)</a>
+Last modified February 1, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/7922c088fc46d40a8437f08886b1a96679f0f4ec>#37 | add gateway http writer (7922c08)</a>
 </div>
 </div>
 </main>

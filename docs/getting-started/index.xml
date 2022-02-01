@@ -41,7 +41,15 @@
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># check clymene-agent logs&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#4e9a06">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;ts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1643299385.1000407&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;caller&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;config/config.go:451&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;msg&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Loading configuration file&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;filename&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;clymene_agent.yml&amp;#34;&lt;/span>}&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#4e9a06">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;ts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1643299385.1012235&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;caller&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;config/config.go:468&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;msg&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Completed loading of configuration file&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;filename&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;clymene_agent.yml&amp;#34;&lt;/span>}&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15691 or :15691) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15691&amp;quot;)
+--config.file string configuration file path. (default &amp;quot;/etc/clymene/clymene.yml&amp;quot;)
+--enable.new-service-discovery-manager use new service discovery manager (default true)
+--http.port int http port (default 15692)
+--log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
+--metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
+--metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
+&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
 &lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
@@ -74,17 +82,26 @@
 &lt;/ul>
 &lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
 &lt;img src="https://user-images.githubusercontent.com/25188468/150611946-c3f07298-03ee-42ba-8937-9da22735da45.png" width="70%" height="70%" alt="architecture_v1.4.0"></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
-&lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC communication.&lt;/p>
+&lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC, HTTP communication.&lt;/p>
 &lt;ol>
 &lt;li>gRPC Service&lt;/li>
 &lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
 &lt;/ol>
-&lt;h3 id="how-to-setting-grpc-server">How to setting gRPC server&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
+&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15690&amp;quot;)
+--gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
 --gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
 --gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
 --gateway.grpc.tls.enabled Enable TLS on the server
 --gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
+--gateway.http-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15611) of the gateway's HTTP server (default &amp;quot;:15611&amp;quot;)
+--gateway.http.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
+--gateway.http.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
+--gateway.http.tls.enabled Enable TLS on the server
+--gateway.http.tls.key string Path to a TLS Private Key file, used to identify this server to clients
+--log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
+--metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
+--metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
@@ -121,7 +138,7 @@
 &lt;li>Kafka message consume&lt;/li>
 &lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
 &lt;/ol>
-&lt;h3 id="how-to-setting-kafka-consumer">How to setting kafka consumer&lt;/h3>
+&lt;h3 id="how-to-setting-ingester">How to setting ingester&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--kafka.consumer.authentication string Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &amp;quot;none&amp;quot;)
 --kafka.consumer.brokers string The comma-separated list of kafka brokers. i.e. '127.0.0.1:9092,0.0.0:1234' (default &amp;quot;127.0.0.1:9092&amp;quot;)
 --kafka.consumer.client-id string The Consumer Client ID that clymene-ingester will use (default &amp;quot;clymene&amp;quot;)
