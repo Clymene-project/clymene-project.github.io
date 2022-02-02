@@ -77,4 +77,4 @@ TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple 
 - [TDengine options](http://clymene-project.github.io/docs/database-options/tdengine)
 
 ### Use gateway Architecture
-<img src="https://user-images.githubusercontent.com/25188468/150611990-61dc11df-1deb-4755-bf28-3a531bd77888.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway">
+<img src="https://user-images.githubusercontent.com/25188468/151970074-e54d8494-2247-404f-b4cb-35e523e225f7.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway">
