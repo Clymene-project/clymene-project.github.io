@@ -4,6 +4,7 @@ tags: ["test", "sample", "docs"]
 title: "Clymene Gateway Getting Start"
 linkTitle: "Clymene Gateway"
 date: 2017-01-05
+weight: 3
 description: >
   The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC, HTTP communication
 ---
@@ -77,4 +78,4 @@ TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple 
 - [TDengine options](http://clymene-project.github.io/docs/database-options/tdengine)
 
 ### Use gateway Architecture
-<img src="https://user-images.githubusercontent.com/25188468/151970074-e54d8494-2247-404f-b4cb-35e523e225f7.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway">
+<img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway">
