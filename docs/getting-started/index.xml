@@ -81,58 +81,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/150611946-c3f07298-03ee-42ba-8937-9da22735da45.png" width="70%" height="70%" alt="architecture_v1.4.0"></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
-&lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC, HTTP communication.&lt;/p>
-&lt;ol>
-&lt;li>gRPC Service&lt;/li>
-&lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
-&lt;/ol>
-&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15690&amp;quot;)
---gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
---gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
---gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
---gateway.grpc.tls.enabled Enable TLS on the server
---gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
---gateway.http-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15611) of the gateway's HTTP server (default &amp;quot;:15611&amp;quot;)
---gateway.http.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
---gateway.http.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
---gateway.http.tls.enabled Enable TLS on the server
---gateway.http.tls.key string Path to a TLS Private Key file, used to identify this server to clients
---log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
---metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
---metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
-&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
-&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
-&lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
-&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
-&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
-&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
-&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
-&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
-&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
-&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
-&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
-&lt;ul>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/151970074-e54d8494-2247-404f-b4cb-35e523e225f7.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: Clymene Ingester Getting Start</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152248922-8b86e107-ed16-4ec1-a68a-48e1016a7521.png" width="70%" height="70%" alt="architecture_v1.4.0"></description></item><item><title>Docs: Clymene Ingester Getting Start</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
 &lt;p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database&lt;/p>
 &lt;ol>
 &lt;li>Kafka message consume&lt;/li>
@@ -194,4 +143,55 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="including-kafka-and-ingester-architecture">Including kafka and ingester Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/150611879-35855d02-0753-4f90-83fd-583c1e036c71.png" width="70%" height="70%" alt="architecture_v1.4.0_ingester"></description></item></channel></rss>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152248986-a2835944-4aba-4acc-a1b5-3d430197da1b.png" width="70%" height="70%" alt="architecture_v1.4.0_ingester"></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
+&lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC, HTTP communication.&lt;/p>
+&lt;ol>
+&lt;li>gRPC Service&lt;/li>
+&lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
+&lt;/ol>
+&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15690&amp;quot;)
+--gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
+--gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
+--gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
+--gateway.grpc.tls.enabled Enable TLS on the server
+--gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
+--gateway.http-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15611) of the gateway's HTTP server (default &amp;quot;:15611&amp;quot;)
+--gateway.http.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
+--gateway.http.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
+--gateway.http.tls.enabled Enable TLS on the server
+--gateway.http.tls.key string Path to a TLS Private Key file, used to identify this server to clients
+--log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
+--metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
+--metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
+&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
+&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
+&lt;p>ElasticSearch&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
+&lt;ul>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item></channel></rss>

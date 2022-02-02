@@ -1,4 +1,87 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Documentation</title><link>/docs/</link><description>Recent content in Documentation on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Docker-compose Example</title><link>/docs/tutorials/docker-compose/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/tutorials/docker-compose/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Documentation</title><link>/docs/</link><description>Recent content in Documentation on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Clymene-agent Getting Start</title><link>/docs/getting-started/agent/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/agent/</guid><description>
+&lt;p>The Clymene-agent is service that collects time series data(does not use disks)&lt;/p>
+&lt;h3 id="how-to-create-a-scrape-target-setting-yaml">How to create a scrape target setting yaml&lt;/h3>
+&lt;ol>
+&lt;li>Config file Option&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">clymene-agent --config.file&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>/etc/clymene/clymene.yml
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>How to write yaml - &lt;a href="https://clymene-project.github.io/docs/service-discovery/">See Clymene Configuration for more information&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">global&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scrape_interval&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">15s&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Set the scrape interval to every 15 seconds. Default is every 1 minute. &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">evaluation_interval&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">15s&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Evaluate rules every 15 seconds. The default is every 1 minute.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">scrape_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>- &lt;span style="color:#204a87;font-weight:bold">job_name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">static_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">targets&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;localhost:9100&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>- &lt;span style="color:#204a87;font-weight:bold">job_name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;kubernetes-kubelet&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scheme&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">https &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">tls_config&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ca_file&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">/var/run/secrets/kubernetes.io/serviceaccount/ca.crt &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">bearer_token_file&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">/var/run/secrets/kubernetes.io/serviceaccount/token &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">kubernetes_sd_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">role&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">node &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">relabel_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">action&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">labelmap &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">regex&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">__meta_kubernetes_node_label_(.+) &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">target_label&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">__address__ &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">replacement&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">kubernetes.default.svc:443 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">source_labels&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#000">__meta_kubernetes_node_name] &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">regex&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">(.+) &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">target_label&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">__metrics_path__ &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">replacement&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">/api/v1/nodes/${1}/proxy/metrics&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>config file reload&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#000">curl -XPOST http://clymene-agent:15692/api/reload&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># check clymene-agent logs&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#4e9a06">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;ts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1643299385.1000407&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;caller&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;config/config.go:451&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;msg&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Loading configuration file&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;filename&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;clymene_agent.yml&amp;#34;&lt;/span>}&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#4e9a06">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;ts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1643299385.1012235&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;caller&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;config/config.go:468&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;msg&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Completed loading of configuration file&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;filename&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;clymene_agent.yml&amp;#34;&lt;/span>}&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15691 or :15691) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15691&amp;quot;)
+--config.file string configuration file path. (default &amp;quot;/etc/clymene/clymene.yml&amp;quot;)
+--enable.new-service-discovery-manager use new service discovery manager (default true)
+--http.port int http port (default 15692)
+--log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
+--metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
+--metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
+&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
+&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
+&lt;p>ElasticSearch&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
+&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
+&lt;ul>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152248922-8b86e107-ed16-4ec1-a68a-48e1016a7521.png" width="70%" height="70%" alt="architecture_v1.4.0"></description></item><item><title>Docs: Docker-compose Example</title><link>/docs/tutorials/docker-compose/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/tutorials/docker-compose/</guid><description>
 &lt;p>You can configure various architectures using the Clymene component.&lt;/p>
 &lt;h3 id="how-to-use-clymene-agent-docker-compose">How to use clymene-agent Docker-compose&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">version&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;2&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -44,7 +127,120 @@
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">command&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">log-level=debug&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">es.server-urls=http://[ELASTICSEARCH-IP]:9200&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: k8s(Kubernetes) Example</title><link>/docs/tutorials/k8s/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/tutorials/k8s/</guid><description>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Clymene Ingester Getting Start</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
+&lt;p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database&lt;/p>
+&lt;ol>
+&lt;li>Kafka message consume&lt;/li>
+&lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
+&lt;/ol>
+&lt;h3 id="how-to-setting-ingester">How to setting ingester&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--kafka.consumer.authentication string Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &amp;quot;none&amp;quot;)
+--kafka.consumer.brokers string The comma-separated list of kafka brokers. i.e. '127.0.0.1:9092,0.0.0:1234' (default &amp;quot;127.0.0.1:9092&amp;quot;)
+--kafka.consumer.client-id string The Consumer Client ID that clymene-ingester will use (default &amp;quot;clymene&amp;quot;)
+--kafka.consumer.encoding string The encoding of metrics (&amp;quot;json&amp;quot;, &amp;quot;protobuf&amp;quot;) consumed from kafka (default &amp;quot;protobuf&amp;quot;)
+--kafka.consumer.group-id string The Consumer Group that clymene-ingester will be consuming on behalf of (default &amp;quot;clymene&amp;quot;)
+--kafka.consumer.kerberos.config-file string Path to Kerberos configuration. i.e /etc/krb5.conf (default &amp;quot;/etc/krb5.conf&amp;quot;)
+--kafka.consumer.kerberos.keytab-file string Path to keytab file. i.e /etc/security/kafka.keytab (default &amp;quot;/etc/security/kafka.keytab&amp;quot;)
+--kafka.consumer.kerberos.password string The Kerberos password used for authenticate with KDC
+--kafka.consumer.kerberos.realm string Kerberos realm
+--kafka.consumer.kerberos.service-name string Kerberos service name (default &amp;quot;kafka&amp;quot;)
+--kafka.consumer.kerberos.use-keytab Use of keytab instead of password, if this is true, keytab file will be used instead of password
+--kafka.consumer.kerberos.username string The Kerberos username used for authenticate with KDC
+--kafka.consumer.plaintext.mechanism string The plaintext Mechanism for SASL/PLAIN authentication, e.g. 'SCRAM-SHA-256' or 'SCRAM-SHA-512' or 'PLAIN' (default &amp;quot;PLAIN&amp;quot;)
+--kafka.consumer.plaintext.password string The plaintext Password for SASL/PLAIN authentication
+--kafka.consumer.plaintext.username string The plaintext Username for SASL/PLAIN authentication
+--kafka.consumer.protocol-version string Kafka protocol version - must be supported by kafka server
+--kafka.consumer.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
+--kafka.consumer.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
+--kafka.consumer.tls.enabled Enable TLS when talking to the remote server(s)
+--kafka.consumer.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
+--kafka.consumer.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
+--kafka.consumer.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
+--kafka.consumer.topic string The name of the kafka topic to consume from (default &amp;quot;clymene&amp;quot;)
+&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
+&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
+&lt;p>ElasticSearch&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
+&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
+&lt;ul>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="including-kafka-and-ingester-architecture">Including kafka and ingester Architecture&lt;/h3>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152248986-a2835944-4aba-4acc-a1b5-3d430197da1b.png" width="70%" height="70%" alt="architecture_v1.4.0_ingester"></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
+&lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC, HTTP communication.&lt;/p>
+&lt;ol>
+&lt;li>gRPC Service&lt;/li>
+&lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
+&lt;/ol>
+&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15690&amp;quot;)
+--gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
+--gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
+--gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
+--gateway.grpc.tls.enabled Enable TLS on the server
+--gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
+--gateway.http-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15611) of the gateway's HTTP server (default &amp;quot;:15611&amp;quot;)
+--gateway.http.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
+--gateway.http.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
+--gateway.http.tls.enabled Enable TLS on the server
+--gateway.http.tls.key string Path to a TLS Private Key file, used to identify this server to clients
+--log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
+--metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
+--metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
+&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
+&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
+&lt;p>ElasticSearch&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
+&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
+&lt;ul>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: k8s(Kubernetes) Example</title><link>/docs/tutorials/k8s/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/tutorials/k8s/</guid><description>
 &lt;p>You can configure various architectures using the Clymene component.&lt;/p>
 &lt;h3 id="how-to-use-clymene-agent-k8s-yaml">How to use clymene-agent k8s yaml&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">apiVersion&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">apps/v1&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -216,90 +412,7 @@
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># type: NodePort&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">selector&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">app&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">clymene-gateway&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Clymene-agent Getting Start</title><link>/docs/getting-started/agent/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/agent/</guid><description>
-&lt;p>The Clymene-agent is service that collects time series data(does not use disks)&lt;/p>
-&lt;h3 id="how-to-create-a-scrape-target-setting-yaml">How to create a scrape target setting yaml&lt;/h3>
-&lt;ol>
-&lt;li>Config file Option&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">clymene-agent --config.file&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>/etc/clymene/clymene.yml
-&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>How to write yaml - &lt;a href="https://clymene-project.github.io/docs/service-discovery/">See Clymene Configuration for more information&lt;/a>&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">global&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scrape_interval&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">15s&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Set the scrape interval to every 15 seconds. Default is every 1 minute. &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">evaluation_interval&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">15s&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Evaluate rules every 15 seconds. The default is every 1 minute.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">scrape_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>- &lt;span style="color:#204a87;font-weight:bold">job_name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">static_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">targets&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;localhost:9100&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>- &lt;span style="color:#204a87;font-weight:bold">job_name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;kubernetes-kubelet&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scheme&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">https &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">tls_config&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ca_file&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">/var/run/secrets/kubernetes.io/serviceaccount/ca.crt &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">bearer_token_file&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">/var/run/secrets/kubernetes.io/serviceaccount/token &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">kubernetes_sd_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">role&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">node &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">relabel_configs&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">action&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">labelmap &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">regex&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">__meta_kubernetes_node_label_(.+) &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">target_label&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">__address__ &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">replacement&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">kubernetes.default.svc:443 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">source_labels&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#000">__meta_kubernetes_node_name] &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">regex&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">(.+) &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">target_label&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">__metrics_path__ &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">replacement&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">/api/v1/nodes/${1}/proxy/metrics&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>config file reload&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#000">curl -XPOST http://clymene-agent:15692/api/reload&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># check clymene-agent logs&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#4e9a06">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;ts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1643299385.1000407&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;caller&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;config/config.go:451&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;msg&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Loading configuration file&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;filename&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;clymene_agent.yml&amp;#34;&lt;/span>}&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#4e9a06">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;ts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1643299385.1012235&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;caller&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;config/config.go:468&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;msg&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Completed loading of configuration file&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;filename&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;clymene_agent.yml&amp;#34;&lt;/span>}&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15691 or :15691) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15691&amp;quot;)
---config.file string configuration file path. (default &amp;quot;/etc/clymene/clymene.yml&amp;quot;)
---enable.new-service-discovery-manager use new service discovery manager (default true)
---http.port int http port (default 15692)
---log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
---metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
---metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
-&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
-&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
-&lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
-&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
-&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
-&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
-&lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
-&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
-&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
-&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
-&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
-&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
-&lt;ul>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/150611946-c3f07298-03ee-42ba-8937-9da22735da45.png" width="70%" height="70%" alt="architecture_v1.4.0"></description></item><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
 &lt;h3 id="clymene-gateway-options">clymene-gateway Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--gateway.grpc.discovery.min-peers int Max number of collectors to which the agent will try to connect at any given time (default 3)
 --gateway.grpc.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;quot;localhost:15610&amp;quot;)
@@ -457,120 +570,7 @@
 --tdengine.password string The password to use when connecting to the server (default &amp;quot;taosdata&amp;quot;)
 --tdengine.server-port int he HTTP port number to use for the connection to TDengine server (default 6041)
 --tdengine.user string The TDengine user name to use when connecting to the server (default &amp;quot;root&amp;quot;)
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
-&lt;p>The Clymene Gateway is an optional service that can receive metric data from the agent through gRPC, HTTP communication.&lt;/p>
-&lt;ol>
-&lt;li>gRPC Service&lt;/li>
-&lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
-&lt;/ol>
-&lt;h3 id="how-to-setting-gateway">How to setting gateway&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15690&amp;quot;)
---gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
---gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
---gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
---gateway.grpc.tls.enabled Enable TLS on the server
---gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
---gateway.http-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15611) of the gateway's HTTP server (default &amp;quot;:15611&amp;quot;)
---gateway.http.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
---gateway.http.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
---gateway.http.tls.enabled Enable TLS on the server
---gateway.http.tls.key string Path to a TLS Private Key file, used to identify this server to clients
---log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
---metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;quot;prometheus&amp;quot;)
---metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;quot;/metrics&amp;quot;)
-&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
-&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
-&lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
-&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
-&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
-&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
-&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
-&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
-&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
-&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
-&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
-&lt;ul>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/151970074-e54d8494-2247-404f-b4cb-35e523e225f7.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: Clymene Ingester Getting Start</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
-&lt;p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database&lt;/p>
-&lt;ol>
-&lt;li>Kafka message consume&lt;/li>
-&lt;li>Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)&lt;/li>
-&lt;/ol>
-&lt;h3 id="how-to-setting-ingester">How to setting ingester&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--kafka.consumer.authentication string Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &amp;quot;none&amp;quot;)
---kafka.consumer.brokers string The comma-separated list of kafka brokers. i.e. '127.0.0.1:9092,0.0.0:1234' (default &amp;quot;127.0.0.1:9092&amp;quot;)
---kafka.consumer.client-id string The Consumer Client ID that clymene-ingester will use (default &amp;quot;clymene&amp;quot;)
---kafka.consumer.encoding string The encoding of metrics (&amp;quot;json&amp;quot;, &amp;quot;protobuf&amp;quot;) consumed from kafka (default &amp;quot;protobuf&amp;quot;)
---kafka.consumer.group-id string The Consumer Group that clymene-ingester will be consuming on behalf of (default &amp;quot;clymene&amp;quot;)
---kafka.consumer.kerberos.config-file string Path to Kerberos configuration. i.e /etc/krb5.conf (default &amp;quot;/etc/krb5.conf&amp;quot;)
---kafka.consumer.kerberos.keytab-file string Path to keytab file. i.e /etc/security/kafka.keytab (default &amp;quot;/etc/security/kafka.keytab&amp;quot;)
---kafka.consumer.kerberos.password string The Kerberos password used for authenticate with KDC
---kafka.consumer.kerberos.realm string Kerberos realm
---kafka.consumer.kerberos.service-name string Kerberos service name (default &amp;quot;kafka&amp;quot;)
---kafka.consumer.kerberos.use-keytab Use of keytab instead of password, if this is true, keytab file will be used instead of password
---kafka.consumer.kerberos.username string The Kerberos username used for authenticate with KDC
---kafka.consumer.plaintext.mechanism string The plaintext Mechanism for SASL/PLAIN authentication, e.g. 'SCRAM-SHA-256' or 'SCRAM-SHA-512' or 'PLAIN' (default &amp;quot;PLAIN&amp;quot;)
---kafka.consumer.plaintext.password string The plaintext Password for SASL/PLAIN authentication
---kafka.consumer.plaintext.username string The plaintext Username for SASL/PLAIN authentication
---kafka.consumer.protocol-version string Kafka protocol version - must be supported by kafka server
---kafka.consumer.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
---kafka.consumer.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
---kafka.consumer.tls.enabled Enable TLS when talking to the remote server(s)
---kafka.consumer.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
---kafka.consumer.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---kafka.consumer.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
---kafka.consumer.topic string The name of the kafka topic to consume from (default &amp;quot;clymene&amp;quot;)
-&lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
-&lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
-&lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
-&lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
-&lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
-&lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
-&lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
-&lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
-&lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
-&lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
-&lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
-&lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
-&lt;ul>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/prometheus">Prometheus option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/cortex">cortex option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/gateway">gateway option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="including-kafka-and-ingester-architecture">Including kafka and ingester Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/150611879-35855d02-0753-4f90-83fd-583c1e036c71.png" width="70%" height="70%" alt="architecture_v1.4.0_ingester"></description></item><item><title>Docs: Configuration</title><link>/docs/service-discovery/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/service-discovery/configuration/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration</title><link>/docs/service-discovery/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/service-discovery/configuration/</guid><description>
 &lt;p>Clymene is configured via command-line flags and a configuration file.&lt;/p>
 &lt;p>To view all available command-line flags, run &lt;code>./clymene-agent -h&lt;/code>.&lt;/p>
 &lt;p>Clymene-agent can reload its configuration at runtime. If the new configuration
