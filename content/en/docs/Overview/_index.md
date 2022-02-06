@@ -58,4 +58,5 @@ communication.
 * Clymene's short-term goal is to support heterogeneous databases in Grafana as a query.
 * [AI/ML platform for clymene](https://github.com/Clymene-project/clymene-analyzer)
 * [Please give me an idea!](https://github.com/Clymene-project/Clymene/discussions)
+* [Add log management collection function](https://github.com/grafana/loki)
 
