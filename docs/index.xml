@@ -240,7 +240,10 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: k8s(Kubernetes) Example</title><link>/docs/tutorials/k8s/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/tutorials/k8s/</guid><description>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: Clymene-promtail Getting Start</title><link>/docs/getting-started/promtail/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/promtail/</guid><description>
+&lt;p>The Clymene-promtail is comming soon!&lt;/p>
+&lt;h3 id="use-log-collection-agent">Use Log collection agent&lt;/h3>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152685257-5c78fa76-f24d-4200-8c3b-58addedd6e59.png" width="70%" height="70%" alt="architecture_v2.-.0"></description></item><item><title>Docs: k8s(Kubernetes) Example</title><link>/docs/tutorials/k8s/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/tutorials/k8s/</guid><description>
 &lt;p>You can configure various architectures using the Clymene component.&lt;/p>
 &lt;h3 id="how-to-use-clymene-agent-k8s-yaml">How to use clymene-agent k8s yaml&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">apiVersion&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">apps/v1&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">

@@ -194,4 +194,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
-&lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item></channel></rss>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: Clymene-promtail Getting Start</title><link>/docs/getting-started/promtail/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/promtail/</guid><description>
+&lt;p>The Clymene-promtail is comming soon!&lt;/p>
+&lt;h3 id="use-log-collection-agent">Use Log collection agent&lt;/h3>
+&lt;img src="https://user-images.githubusercontent.com/25188468/152685257-5c78fa76-f24d-4200-8c3b-58addedd6e59.png" width="70%" height="70%" alt="architecture_v2.-.0"></description></item></channel></rss>
