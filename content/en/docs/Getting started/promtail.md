@@ -99,10 +99,8 @@ STORAGE_TYPE=loki
 [//]: # (```)
 #### 2. Option description by storage type
 
-- [ElasticSearch option](./elasticsearch/es-option.md)
-- [Loki option](./loki/loki-option.md)
-  [//]: # (- [Kafka option]&#40;./kafka/kafka-option.md&#41;)
-  [//]: # (- [gateway option]&#40;./gateway/gataway-option.md&#41;)
+- [ElasticSearch option](http://clymene-project.github.io/docs/database-options/elasticsearch)
+- [Loki option](http://clymene-project.github.io/docs/database-options/loki)
 
 ### Docker-compose Example
 ```yaml
