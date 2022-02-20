@@ -14,7 +14,7 @@ In addition, various architectures can be constructed using ingester and gateway
 
 ## Clymene-project?
 
-Clymene is an open source developed based on Prometheus’ time series data collection method and the architecture of the Jaegertracing project, an open source of service tracing in a distributed environment. 
+Clymene is an open source developed based on Prometheus’ time-series data collection method and the architecture of the Jaegertracing project, an open source of service tracing in a distributed environment. 
 Prometheus’ Service Discovery features make it easy to find endpoints that can collect time series data from multiple environments, and can be configured with a powerful high-availability (HA) architecture using Jaeger’s backend structure.
 
 ## Why do I have to use Clymene?
@@ -38,6 +38,15 @@ The Clymene-agent is service that collects time series data(does not use disks)
 3. Time-series data transfer to gateway(gRPC) (Optional)
 4. Time-series data transfer to kafka (Optional)
 5. Time-series data insert to Database([supported DB](https://github.com/Clymene-project/Clymene/blob/main/docs/clymene-agent/README.md#Option-description-by-storage-type)) (Optional)
+
+#### Clymene Promtail
+The Clymene-promtail customized loki's log collection agent for the Clymene project.
+
+1. [Service Discovery](https://clymene-project.github.io/docs/service-discovery/promtail-config/)
+2. log collection
+3. log data transfer to gateway(gRPC) (TODO)
+4. log data transfer to kafka (TODO)
+5. log data insert to Database([supported DB](https://github.com/Clymene-project/Clymene/blob/main/docs/clymene-promtail/README.md#Option-description-by-storage-type)) (Optional)
 
 #### Clymene Ingester
 The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database.
