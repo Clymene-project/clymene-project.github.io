@@ -160,10 +160,8 @@ will be supported&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=loki
 &lt;/code>&lt;/pre>&lt;h4 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h4>
 &lt;ul>
-&lt;li>&lt;a href="./elasticsearch/es-option.md">ElasticSearch option&lt;/a>&lt;/li>
-&lt;li>&lt;a href="./loki/loki-option.md">Loki option&lt;/a>
-&lt;a href="#" title="Kafka">//&lt;/a>: # (- [Kafka option](./kafka/kafka-option.md))
-&lt;a href="#" title="Kafka">//&lt;/a>: # (- [gateway option](./gateway/gataway-option.md))&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/elasticsearch">ElasticSearch option&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/loki">Loki option&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="docker-compose-example">Docker-compose Example&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">version&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;2&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
