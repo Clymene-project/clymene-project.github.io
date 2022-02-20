@@ -53,5 +53,7 @@ description: >
 --es.token-file string                      Path to a file containing bearer token. This flag also loads CA if it is specified.
 --es.username string                        The username required by Elasticsearch. The basic authentication also loads CA if it is specified.
 --es.version uint                           The major Elasticsearch version. If not specified, the value will be auto-detected from Elasticsearch.
+--es.clymene-agent.index.name string          Set the index name to save the metrics collected by clymene-agent. (default "clymene-metrics")
+--es.clymene-promtail.index.name string       Set the index name to save the log collected by clymene-promtail. (default "clymene-logs")
 ```
 
