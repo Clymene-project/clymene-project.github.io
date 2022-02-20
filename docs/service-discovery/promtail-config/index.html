@@ -23,12 +23,12 @@ which contains information on the Promtail server, …">
 Configuration File Reference To specify which configuration file to load, pass the --config.file flag at the command line. The file is written in YAML format, defined by the schema below. Brackets indicate that a parameter is optional. For non-list parameters the value is set to the specified default.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/service-discovery/promtail-config/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-02-20T14:11:00+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-02-20T21:47:15+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="promtail-config">
 <meta itemprop=description content="Configuring Promtail Promtail is configured in a YAML file (usually referred to as config.yaml) which contains information on the Promtail server, where positions are stored, and how to scrape logs from files.
 Configuration File Reference To specify which configuration file to load, pass the --config.file flag at the command line. The file is written in YAML format, defined by the schema below. Brackets indicate that a parameter is optional. For non-list parameters the value is set to the specified default.">
-<meta itemprop=dateModified content="2022-02-20T14:11:00+09:00">
-<meta itemprop=wordCount content="8036">
+<meta itemprop=dateModified content="2022-02-20T21:47:15+09:00">
+<meta itemprop=wordCount content="8033">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="promtail-config">
 <meta name=twitter:description content="Configuring Promtail Promtail is configured in a YAML file (usually referred to as config.yaml) which contains information on the Promtail server, where positions are stored, and how to scrape logs from files.
@@ -1579,9 +1579,6 @@ targets.</p>
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>positions</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>filename</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>/tmp/positions.yaml</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>clients</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline>  </span>- <span style=color:#204a87;font-weight:700>url</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>http://ip_or_hostname_where_loki_runs:3100/loki/api/v1/push</span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>scrape_configs</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span>- <span style=color:#204a87;font-weight:700>job_name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>journal</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>journal</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
@@ -1599,9 +1596,6 @@ targets.</p>
 </span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>positions</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>filename</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>/tmp/positions.yaml</span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>clients</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline>  </span>- <span style=color:#204a87;font-weight:700>url</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>http://loki_addr:3100/loki/api/v1/push</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>scrape_configs</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span>- <span style=color:#204a87;font-weight:700>job_name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>syslog</span><span style=color:#f8f8f8;text-decoration:underline>
@@ -1621,8 +1615,7 @@ targets.</p>
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>positions</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>filename</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>/tmp/positions.yaml</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>clients</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
-</span><span style=color:#f8f8f8;text-decoration:underline>  </span>- <span style=color:#204a87;font-weight:700>url</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>http://ip_or_hostname_where_Loki_run:3100/loki/api/v1/push</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>scrape_configs</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline></span>- <span style=color:#204a87;font-weight:700>job_name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>push1</span><span style=color:#f8f8f8;text-decoration:underline>
@@ -1636,7 +1629,7 @@ targets.</p>
 <p>A new server instance is created so the <code>http_listen_port</code> and <code>grpc_listen_port</code> must be different from the Promtail <code>server</code> config section (unless it&rsquo;s disabled)</p>
 <p>You can set <code>grpc_listen_port</code> to <code>0</code> to have a random port assigned if not using httpgrpc.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified February 20, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/90bfc28db3efdbcf6624ddbbf0faad88535fda2d>#45 | Release v2.0.0 (90bfc28)</a>
+Last modified February 20, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/ad7534506fb56397682e21351bc5d59cb3d13156>#45 | Release v2.0.0 (ad75345)</a>
 </div>
 </div>
 </main>
