@@ -19,8 +19,8 @@
 <meta name=description content="
     
             
-The Clymene is a time series data collection platform for distributed systems inspired by Prometheus
-and Jaeger. Time series data …">
+The Clymene is a time-series data and logs collection platform for distributed systems inspired by Prometheus
+and Jaeger. …">
 <meta property="og:title" content="Documentation">
 <meta property="og:description" content="This is Clymene project official docs">
 <meta property="og:type" content="website">
@@ -157,11 +157,12 @@ and Jaeger. Time series data …">
 <p><img src=https://user-images.githubusercontent.com/25188468/149839035-f357caea-d335-4b24-88e7-e957f79dc6be.png alt=clymene_logo_v1_side></p>
 <p><a href=https://bestpractices.coreinfrastructure.org/projects/5491><img src=https://bestpractices.coreinfrastructure.org/projects/5491/badge alt="CII Best Practices"></a> <img src=https://github.com/clymene-project/clymene/workflows/CodeQL/badge.svg alt=CodeQL> <a href=https://opensource.org/licenses/Apache-2.0><img src=https://img.shields.io/badge/License-Apache%202.0-blue.svg alt=License></a> <img src=https://img.shields.io/github/v/release/clymene-project/clymene alt="GitHub release (latest by date)"> <a href=https://pkg.go.dev/github.com/Clymene-project/Clymene><img src=https://pkg.go.dev/badge/github.com/Clymene-project/Clymene.svg alt="Go Reference"></a><br>
 <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt=Go> <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt=Docker> <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt=Kubernetes> <img src="https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch" alt=ElasticSearch> <img src="https://img.shields.io/badge/influxdb-%2322ADF6.svg?&style=for-the-badge&logo=influxdb&logoColor=white"> <img src="https://img.shields.io/badge/prometheus-%23E6522C.svg?&style=for-the-badge&logo=prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTSDB-green?style=for-the-badge"> <img src="https://img.shields.io/badge/cortex-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/tdengine-gray?style=for-the-badge"></p>
-<p>The Clymene is a time series data collection platform for distributed systems inspired by <a href=https://prometheus.io>Prometheus</a>
-and <a href=https://www.jaegertracing.io>Jaeger</a>. Time series data from various environments can be collected and stored in different types of databases. It can be configured in a variety of architectures.</p>
+<p>The Clymene is a time-series data and logs collection platform for distributed systems inspired by <a href=https://prometheus.io>Prometheus</a>
+and <a href=https://www.jaegertracing.io>Jaeger</a>. Time-series data and logs from various environments can be collected and stored in different types of databases. It can be configured in a variety of architectures.</p>
 <ul>
 <li><strong>Time-series data collection platform:</strong> Clymene uses fewer resources than <a href=https://prometheus.io>Prometheus</a> to collect metrics. In addition, various architectures can be constructed using ingester and gateway components.</li>
 <li><strong>heterogeneous database support:</strong> Time series data created with Prometheus exporter can be stored in various databases such as ElasticSearch, Prometheus, Cortex, kdb++, OpenTSDB, InfluxDB and TDengine</li>
+<li><strong>logs data collection platform:</strong> The promtail of the loki project was customized and developed in a form suitable for a distributed environment. In addition to loki, you can store logs data in elasticsearch as well.</li>
 </ul>
 <div class=section-index>
 <hr class=panel-line>
@@ -203,7 +204,7 @@ and <a href=https://www.jaegertracing.io>Jaeger</a>. Time series data from vario
 </div>
 </div>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 22, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/9434a8be6c42f4579467ae680037fbb773f6f3d8>#35 | add TDengine writer (9434a8b)</a>
+Last modified February 20, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/9d09d4d816155684d09f918f9b1fef7842d4f0e4>#45 | Release v2.0.0 (9d09d4d)</a>
 </div>
 </div>
 </main>

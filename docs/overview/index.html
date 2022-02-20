@@ -175,7 +175,7 @@ Clymene, developed as an architecture that collects time series data from variou
 <p>Clymene agent does not use WAL(Write Ahead Log), it uses fewer resources than <a href=https://prometheus.io>Prometheus</a> when collecting metrics.</p>
 <p>In addition, various architectures can be constructed using ingester and gateway components.</p>
 <h2 id=clymene-project>Clymene-project?</h2>
-<p>Clymene is an open source developed based on Prometheus’ time series data collection method and the architecture of the Jaegertracing project, an open source of service tracing in a distributed environment.
+<p>Clymene is an open source developed based on Prometheus’ time-series data collection method and the architecture of the Jaegertracing project, an open source of service tracing in a distributed environment.
 Prometheus’ Service Discovery features make it easy to find endpoints that can collect time series data from multiple environments, and can be configured with a powerful high-availability (HA) architecture using Jaeger’s backend structure.</p>
 <h2 id=why-do-i-have-to-use-clymene>Why do I have to use Clymene?</h2>
 <p>Help your user know if your project will help them. Useful information can include:</p>
@@ -200,6 +200,15 @@ feature finds Metric collection endpoints.</li>
 <li>Time-series data transfer to kafka (Optional)</li>
 <li>Time-series data insert to Database(<a href=https://github.com/Clymene-project/Clymene/blob/main/docs/clymene-agent/README.md#Option-description-by-storage-type>supported DB</a>) (Optional)</li>
 </ol>
+<h4 id=clymene-promtail>Clymene Promtail</h4>
+<p>The Clymene-promtail customized loki&rsquo;s log collection agent for the Clymene project.</p>
+<ol>
+<li><a href=https://clymene-project.github.io/docs/service-discovery/promtail-config/>Service Discovery</a></li>
+<li>log collection</li>
+<li>log data transfer to gateway(gRPC) (TODO)</li>
+<li>log data transfer to kafka (TODO)</li>
+<li>log data insert to Database(<a href=https://github.com/Clymene-project/Clymene/blob/main/docs/clymene-promtail/README.md#Option-description-by-storage-type>supported DB</a>) (Optional)</li>
+</ol>
 <h4 id=clymene-ingester>Clymene Ingester</h4>
 <p>The Clymene ingester is an optional service responsible for insert time series data loaded on kafka into the database.</p>
 <ol>
@@ -223,7 +232,7 @@ communication.</p>
 <div class=section-index>
 </div>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified February 6, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/5f715594451c078c59cc7acc6bcd62e68fc3d068>add roadmap (5f71559)</a>
+Last modified February 20, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/9d09d4d816155684d09f918f9b1fef7842d4f0e4>#45 | Release v2.0.0 (9d09d4d)</a>
 </div>
 </div>
 </main>
