@@ -98,8 +98,150 @@ data:
             replacement: /api/v1/nodes/${1}/proxy/metrics
 ```
 
+### How to use clymene-promtail k8s yaml
+```yaml
+--- # Daemonset.yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: clymene-promtail
+  namespace: clymene
+  labels:
+    app: clymene-promtail
+spec:
+  selector:
+    matchLabels:
+      app: clymene-promtail
+  template:
+    metadata:
+      labels:
+        app: clymene-promtail
+    spec:
+      containers:
+        - name: clymene-promtail
+          image: bourbonkk/clymene-promtail:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 15698
+            - containerPort: 9080
+          args:
+            - --config.file=/etc/promtail/config.yml
+            - --es.server-urls=http://elasticsearch:9200
+            - --log-level=info
+          env:
+            - name: STORAGE_TYPE
+              value: elasticsearch
+          volumeMounts:
+            - mountPath: /etc/promtail/
+              name: config-volume
+      volumes:
+        - name: config-volume
+          configMap:
+            name: promtail-config
+      securityContext:
+        runAsUser: 1000
+--- # Service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: clymene-agent
+  namespace: clymene
+  labels:
+    app: clymene-agent
+spec:
+  ports:
+    - name: admin
+      port: 15698
+      targetPort: 15698
+    - name: server
+      port: 9080
+      targetPort: 9080
+  selector:
+    app: clymene-agent
+--- # configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: promtail-config
+  namespace: clymene
+data:
+  config.yml: |
+    server:
+      http_listen_port: 9080
+      grpc_listen_port: 0
 
-### How to use clymene-ingester Docker-compose
+    positions:
+      filename: /tmp/positions.yaml
+
+    scrape_configs:
+      - job_name: system
+        static_configs:
+          - targets:
+              - localhost
+            labels:
+              job: varlogs
+              __path__: /var/log/*log
+
+      - job_name: kafka-sasl-plain
+        kafka:
+          use_incoming_timestamp: false
+          brokers:
+            - localhost:29092
+          authentication:
+            type: sasl
+            sasl_config:
+              mechanism: PLAIN
+              user: kafkaadmin
+              password: kafkaadmin-pass
+              use_tls: true
+              ca_file: ../../../tools/kafka/secrets/promtail-kafka-ca.pem
+              insecure_skip_verify: true
+          group_id: kafka_group
+          topics:
+            - foo
+            - ^promtail.*
+          labels:
+            job: kafka-sasl-plain
+
+--- # Clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: promtail-clusterrole
+rules:
+  - apiGroups: [""]
+    resources:
+      - nodes
+      - services
+      - pods
+    verbs:
+      - get
+      - watch
+      - list
+
+--- #ServiceAccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: promtail-serviceaccount
+
+--- #Rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: promtail-clusterrolebinding
+subjects:
+  - kind: ServiceAccount
+    name: promtail-serviceaccount
+    namespace: clymene
+roleRef:
+  kind: ClusterRole
+  name: promtail-clusterrole
+  apiGroup: rbac.authorization.k8s.io
+
+```
+
+### How to use clymene-ingester k8s yaml
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -137,7 +279,7 @@ spec:
 ```
 
 
-### How to use clymene-gateway Docker-compose
+### How to use clymene-gateway k8s yaml
 ```yaml
 apiVersion: apps/v1
 kind: Deployment

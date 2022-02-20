@@ -28,6 +28,24 @@ services:
       # - --gateway.grpc.host-port=localhost:15610
 ```
 
+### How to use clymene-promtail Docker-compose
+```yaml
+version: '2'
+services:
+  clymene-promtail:
+    image: bourbonkk/clymene-promtail:latest
+    ports:
+      - "15698:15698"
+      - "9080:9080"
+    environment:
+      - STORAGE_TYPE=elasticsearch
+    volumes:
+      - ./config/promtail-local-config.yaml.yml:/etc/promtail/config.yml
+    command:
+      - --log-level=debug
+      - --es.server-urls=[ELASTICSEARCH-IP]:9200
+```
+
 ### How to use clymene-ingester Docker-compose
 ```yaml
 version: '2'
