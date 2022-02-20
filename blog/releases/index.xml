@@ -1,4 +1,11 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – New Releases</title><link>/blog/releases/</link><description>Recent content in New Releases on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 1.5.0 (2022-01-30)</title><link>/blog/2022/01/30/1.5.0-2022-01-30/</link><pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/30/1.5.0-2022-01-30/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – New Releases</title><link>/blog/releases/</link><description>Recent content in New Releases on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.0.0 (2022-02-20)</title><link>/blog/2022/02/20/2.0.0-2022-02-20/</link><pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><guid>/blog/2022/02/20/2.0.0-2022-02-20/</guid><description>
+&lt;p>A log collection agent, promtail, is now available. Collected logs can be stored in loki and elasticsearch.&lt;/p>
+&lt;ol>
+&lt;li>Add log collection component clymene-promtail issue: #41&lt;/li>
+&lt;li>Added http receiver function to send/receive gateway metricWriter to http issue: #37&lt;/li>
+&lt;li>Add elasticsearch index name change option issue: #44&lt;/li>
+&lt;li>Logs collected by clymene-promtail can be stored in elasticsearch issue: #43&lt;/li>
+&lt;/ol></description></item><item><title>Blog: 1.5.0 (2022-01-30)</title><link>/blog/2022/01/30/1.5.0-2022-01-30/</link><pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/30/1.5.0-2022-01-30/</guid><description>
 &lt;p>Updated Clymene&amp;rsquo;s service discovery feature. For details, please check the clymene official docs(&lt;a href="https://clymene-project.github.io/docs/service-discovery/configuration/">https://clymene-project.github.io/docs/service-discovery/configuration/&lt;/a>)&lt;/p>
 &lt;ol>
 &lt;li>kuma(&lt;a href="https://kuma.io/">https://kuma.io/&lt;/a>)&lt;/li>

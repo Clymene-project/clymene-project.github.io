@@ -874,6 +874,8 @@ will be supported&lt;/p>
 --es.token-file string Path to a file containing bearer token. This flag also loads CA if it is specified.
 --es.username string The username required by Elasticsearch. The basic authentication also loads CA if it is specified.
 --es.version uint The major Elasticsearch version. If not specified, the value will be auto-detected from Elasticsearch.
+--es.clymene-agent.index.name string Set the index name to save the metrics collected by clymene-agent. (default &amp;quot;clymene-metrics&amp;quot;)
+--es.clymene-promtail.index.name string Set the index name to save the log collected by clymene-promtail. (default &amp;quot;clymene-logs&amp;quot;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: InfluxDB Options</title><link>/docs/database-options/influxdb/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/influxdb/</guid><description>
 &lt;h3 id="influxdb-options">InfluxDB Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--influxdb.bucket string influx bucket, A bucket is a named location where time series data is stored
@@ -928,6 +930,11 @@ will be supported&lt;/p>
 --kafka.producer.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
 --kafka.producer.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
 --kafka.producer.topic string The name of the kafka topic (default &amp;quot;clymene&amp;quot;)
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Loki Options</title><link>/docs/database-options/loki/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/loki/</guid><description>
+&lt;p>Loki storage is only available for clymene-promtail&lt;/p>
+&lt;h3 id="loki-options">Loki Options&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--loki.client.timeout duration Maximum time to wait for server to respond to a request (default 10s)
+--loki.client.url string URL of log server (default &amp;quot;http://localhost:3100/loki/api/v1/push&amp;quot;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: OpenTSDB Options</title><link>/docs/database-options/opentsdb/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/opentsdb/</guid><description>
 &lt;h3 id="opentsdb-options">OpenTSDB Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--opentsdb.dry-run Don't actually send anything to the TSD, just print the datapoints.

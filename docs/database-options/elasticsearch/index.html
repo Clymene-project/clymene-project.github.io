@@ -23,12 +23,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/database-options/elasticsearch/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2017-01-18T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-01-18T08:18:22+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-02-20T14:18:14+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="ElasticSearch Options">
 <meta itemprop=description content="https://www.elastic.co
 "><meta itemprop=datePublished content="2017-01-18T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-01-18T08:18:22+09:00">
-<meta itemprop=wordCount content="734">
+<meta itemprop=dateModified content="2022-02-20T14:18:14+09:00">
+<meta itemprop=wordCount content="764">
 <meta itemprop=keywords content="test,sample,docs,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="ElasticSearch Options">
 <meta name=twitter:description content="https://www.elastic.co
@@ -109,6 +109,8 @@
 <a href=/docs/database-options/influxdb/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsinfluxdb><span>InfluxDB Options</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionskafka-li>
 <a href=/docs/database-options/kafka/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionskafka><span>Kafka Options</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsloki-li>
+<a href=/docs/database-options/loki/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsloki><span>Loki Options</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsopentsdb-li>
 <a href=/docs/database-options/opentsdb/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabase-optionsopentsdb><span>OpenTSDB Options</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdatabase-optionsprometheus-li>
@@ -207,9 +209,11 @@
 --es.token-file string                      Path to a file containing bearer token. This flag also loads CA if it is specified.
 --es.username string                        The username required by Elasticsearch. The basic authentication also loads CA if it is specified.
 --es.version uint                           The major Elasticsearch version. If not specified, the value will be auto-detected from Elasticsearch.
+--es.clymene-agent.index.name string          Set the index name to save the metrics collected by clymene-agent. (default &quot;clymene-metrics&quot;)
+--es.clymene-promtail.index.name string       Set the index name to save the log collected by clymene-promtail. (default &quot;clymene-logs&quot;)
 </code></pre>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 18, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/05960440c63118c6c20aa8f6c8b6c4991c3d1b24>#29 | Write the contents of the official document. (0596044)</a>
+Last modified February 20, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/8f4fff722cf5b6b3c7a568d9286f3c5160a9b8c2>#45 | Release v2.0.0 (8f4fff7)</a>
 </div>
 </div>
 </main>
