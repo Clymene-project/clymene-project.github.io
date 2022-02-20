@@ -1690,9 +1690,6 @@ server:
 positions:
   filename: /tmp/positions.yaml
 
-clients:
-  - url: http://ip_or_hostname_where_loki_runs:3100/loki/api/v1/push
-
 scrape_configs:
   - job_name: journal
     journal:
@@ -1715,9 +1712,6 @@ server:
 
 positions:
   filename: /tmp/positions.yaml
-
-clients:
-  - url: http://loki_addr:3100/loki/api/v1/push
 
 scrape_configs:
   - job_name: syslog
@@ -1742,8 +1736,7 @@ server:
 positions:
   filename: /tmp/positions.yaml
 
-clients:
-  - url: http://ip_or_hostname_where_Loki_run:3100/loki/api/v1/push
+
 
 scrape_configs:
 - job_name: push1
