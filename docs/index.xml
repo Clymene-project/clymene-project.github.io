@@ -52,23 +52,23 @@
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch
 &lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
 &lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=prometheus
 &lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=cortex
 &lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=gateway
 &lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
 &lt;ul>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
@@ -92,8 +92,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#4e9a06">&amp;#34;15691:15691&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#4e9a06">&amp;#34;15692:15692&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">environment&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">TS_STORAGE_TYPE=kafka&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># database you want to use&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># - TS_STORAGE_TYPE=gateway&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">STORAGE_TYPE=kafka&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># database you want to use&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># - STORAGE_TYPE=gateway&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">volumes&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">./config/clymene_scrape_config.yml:/etc/clymene/clymene.yml&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">command&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -123,8 +123,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ports&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#4e9a06">&amp;#34;15694:15694&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">environment&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># - TS_STORAGE_TYPE=elasticsearch,prometheus # use composite writer&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">TS_STORAGE_TYPE=elasticsearch&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># - STORAGE_TYPE=elasticsearch,prometheus # use composite writer&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">STORAGE_TYPE=elasticsearch&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">command&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">log-level=debug&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">kafka.consumer.brokers=[KAFKA-IP]:9092&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -138,7 +138,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ports&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#4e9a06">&amp;#34;15610:15610&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">environment&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">TS_STORAGE_TYPE=elasticsearch&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">STORAGE_TYPE=elasticsearch&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">command&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">log-level=debug&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">es.server-urls=http://[ELASTICSEARCH-IP]:9200&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -412,23 +412,23 @@ will be supported&lt;/p>
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch
 &lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
 &lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=prometheus
 &lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=cortex
 &lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=gateway
 &lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
 &lt;ul>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
@@ -465,21 +465,21 @@ will be supported&lt;/p>
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch
 &lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
 &lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=prometheus
 &lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=cortex
 &lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
 &lt;ul>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
@@ -525,7 +525,7 @@ will be supported&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">log-level=info&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># - --gateway.grpc.host-port=clymene-gateway:15610&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">env&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">TS_STORAGE_TYPE&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">STORAGE_TYPE&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">value&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">kafka&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># value: gateway&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">volumeMounts&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -750,7 +750,7 @@ will be supported&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">log-level=info&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">kafka.consumer.brokers=clymene-kafka-broker:9092&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">env&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">TS_STORAGE_TYPE&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">STORAGE_TYPE&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">value&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">prometheus&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">securityContext&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">runAsUser&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1000&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -782,7 +782,7 @@ will be supported&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">es.server-urls=http://[ELASTICSEARCH-IP]:9200&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- --&lt;span style="color:#000">log-level=info&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">env&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">TS_STORAGE_TYPE&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">STORAGE_TYPE&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">value&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">elasticsearch&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">securityContext&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">runAsUser&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1000&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">

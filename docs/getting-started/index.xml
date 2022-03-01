@@ -52,23 +52,23 @@
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch
 &lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
 &lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=prometheus
 &lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=cortex
 &lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=gateway
 &lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
 &lt;ul>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
@@ -351,23 +351,23 @@ will be supported&lt;/p>
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch
 &lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
 &lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=prometheus
 &lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=cortex
 &lt;/code>&lt;/pre>&lt;p>gateway&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=gateway
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=gateway
 &lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
 &lt;ul>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>
@@ -404,21 +404,21 @@ will be supported&lt;/p>
 &lt;/code>&lt;/pre>&lt;h3 id="how-to-set-up-the-storage-type">How to set up the Storage Type&lt;/h3>
 &lt;h5 id="1-setting-environmental-variables">1. Setting environmental variables&lt;/h5>
 &lt;p>ElasticSearch&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch
 &lt;/code>&lt;/pre>&lt;p>Kafka&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=kafka
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
 &lt;/code>&lt;/pre>&lt;p>prometheus&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=prometheus
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=prometheus
 &lt;/code>&lt;/pre>&lt;p>cortex&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=cortex
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=cortex
 &lt;/code>&lt;/pre>&lt;p>opentsdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=opentsdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=opentsdb
 &lt;/code>&lt;/pre>&lt;p>influxdb&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=influxdb
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=tdengine
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
-&lt;pre tabindex="0">&lt;code>TS_STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
 &lt;ul>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/kafka">Kafka option&lt;/a>&lt;/li>

@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/getting-started/agent/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2017-01-18T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-02-03T07:37:35+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-03-02T07:23:56+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="Clymene-agent Getting Start">
 <meta itemprop=description content="The Clymene-agent is service that collects time series data
 "><meta itemprop=datePublished content="2017-01-18T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-02-03T07:37:35+09:00">
+<meta itemprop=dateModified content="2022-03-02T07:23:56+09:00">
 <meta itemprop=wordCount content="249">
 <meta itemprop=keywords content="test,sample,docs,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Clymene-agent Getting Start">
@@ -175,19 +175,19 @@
 --log-level string                       Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &#34;info&#34;)
 --metrics-backend string                 Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &#34;prometheus&#34;)
 --metrics-http-route string              Defines the route of HTTP endpoint for metrics backends that support scraping (default &#34;/metrics&#34;)
-</code></pre><h3 id=how-to-set-up-the-storage-type>How to set up the Storage Type</h3><h5 id=1-setting-environmental-variables>1. Setting environmental variables</h5><p>ElasticSearch</p><pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch
-</code></pre><p>Kafka</p><pre tabindex=0><code>TS_STORAGE_TYPE=kafka
-</code></pre><p>prometheus</p><pre tabindex=0><code>TS_STORAGE_TYPE=prometheus
-</code></pre><p>cortex</p><pre tabindex=0><code>TS_STORAGE_TYPE=cortex
-</code></pre><p>gateway</p><pre tabindex=0><code>TS_STORAGE_TYPE=gateway
-</code></pre><p>opentsdb</p><pre tabindex=0><code>TS_STORAGE_TYPE=opentsdb
-</code></pre><p>influxdb</p><pre tabindex=0><code>TS_STORAGE_TYPE=influxdb
-</code></pre><p>tdengine</p><pre tabindex=0><code>TS_STORAGE_TYPE=tdengine
-</code></pre><p>Several</p><pre tabindex=0><code>TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
+</code></pre><h3 id=how-to-set-up-the-storage-type>How to set up the Storage Type</h3><h5 id=1-setting-environmental-variables>1. Setting environmental variables</h5><p>ElasticSearch</p><pre tabindex=0><code>STORAGE_TYPE=elasticsearch
+</code></pre><p>Kafka</p><pre tabindex=0><code>STORAGE_TYPE=kafka
+</code></pre><p>prometheus</p><pre tabindex=0><code>STORAGE_TYPE=prometheus
+</code></pre><p>cortex</p><pre tabindex=0><code>STORAGE_TYPE=cortex
+</code></pre><p>gateway</p><pre tabindex=0><code>STORAGE_TYPE=gateway
+</code></pre><p>opentsdb</p><pre tabindex=0><code>STORAGE_TYPE=opentsdb
+</code></pre><p>influxdb</p><pre tabindex=0><code>STORAGE_TYPE=influxdb
+</code></pre><p>tdengine</p><pre tabindex=0><code>STORAGE_TYPE=tdengine
+</code></pre><p>Several</p><pre tabindex=0><code>STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
 </code></pre><h5 id=2-option-description-by-storage-type>2. Option description by storage type</h5><ul>
 <li><a href=http://clymene-project.github.io/docs/database-options/kafka>Kafka option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/elasticsearch>ElasticSearch option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/prometheus>Prometheus option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/cortex>cortex option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/gateway>gateway option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/opentsdb>Opentsdb option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/influxdb>influxdb option</a></li><li><a href=http://clymene-project.github.io/docs/database-options/tdengine>TDengine options</a></li></ul><h3 id=use-only-agent-architecture>Use only agent Architecture</h3><img src=https://user-images.githubusercontent.com/25188468/152248922-8b86e107-ed16-4ec1-a68a-48e1016a7521.png width=70% height=70% alt=architecture_v1.4.0>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified February 3, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/219052e9fa4627b1983d1b0add4d4c5d4b3b4503>change architecture images (219052e)</a>
+Last modified March 2, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/933df6a139b9080e9576868fd3f76c830b0c6396>#45 | Release v2.0.0 (933df6a)</a>
 </div></div></main></div></div><footer class="bg-dark py-5 row d-print-none">
 <div class="container-fluid mx-sm-5">
 <div class=row>

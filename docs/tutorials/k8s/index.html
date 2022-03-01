@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/tutorials/k8s/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2017-01-05T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-02-20T14:15:40+09:00"><meta property="og:site_name" content="Clymene-project">
+<meta property="article:modified_time" content="2022-03-02T07:23:56+09:00"><meta property="og:site_name" content="Clymene-project">
 <meta itemprop=name content="k8s(Kubernetes) Example">
 <meta itemprop=description content="How to use Clymene at k8s(kubernetes)
 "><meta itemprop=datePublished content="2017-01-05T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-02-20T14:15:40+09:00">
+<meta itemprop=dateModified content="2022-03-02T07:23:56+09:00">
 <meta itemprop=wordCount content="179">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="k8s(Kubernetes) Example">
@@ -164,7 +164,7 @@
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- --<span style=color:#000>log-level=info</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span><span style=color:#8f5902;font-style:italic># - --gateway.grpc.host-port=clymene-gateway:15610</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>          </span><span style=color:#204a87;font-weight:700>env</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
-</span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- <span style=color:#204a87;font-weight:700>name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>TS_STORAGE_TYPE</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- <span style=color:#204a87;font-weight:700>name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>STORAGE_TYPE</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>              </span><span style=color:#204a87;font-weight:700>value</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>kafka</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#8f5902;font-style:italic>#              value: gateway</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>          </span><span style=color:#204a87;font-weight:700>volumeMounts</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
@@ -387,7 +387,7 @@
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- --<span style=color:#000>log-level=info</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- --<span style=color:#000>kafka.consumer.brokers=clymene-kafka-broker:9092</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>          </span><span style=color:#204a87;font-weight:700>env</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
-</span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- <span style=color:#204a87;font-weight:700>name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>TS_STORAGE_TYPE</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- <span style=color:#204a87;font-weight:700>name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>STORAGE_TYPE</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>              </span><span style=color:#204a87;font-weight:700>value</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>prometheus</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>      </span><span style=color:#204a87;font-weight:700>securityContext</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>        </span><span style=color:#204a87;font-weight:700>runAsUser</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>1000</span><span style=color:#f8f8f8;text-decoration:underline>
@@ -418,7 +418,7 @@
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- --<span style=color:#000>es.server-urls=http://[ELASTICSEARCH-IP]:9200</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- --<span style=color:#000>log-level=info</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>          </span><span style=color:#204a87;font-weight:700>env</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
-</span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- <span style=color:#204a87;font-weight:700>name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>TS_STORAGE_TYPE</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>            </span>- <span style=color:#204a87;font-weight:700>name</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>STORAGE_TYPE</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>              </span><span style=color:#204a87;font-weight:700>value</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>elasticsearch</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>      </span><span style=color:#204a87;font-weight:700>securityContext</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>        </span><span style=color:#204a87;font-weight:700>runAsUser</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>1000</span><span style=color:#f8f8f8;text-decoration:underline>
@@ -439,7 +439,7 @@
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>selector</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>app</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>clymene-gateway</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span></code></pre></div><div class="text-muted mt-5 pt-3 border-top">
-Last modified February 20, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/8ec14f121746eec6a3358b742ee7560cdc399bfa>#45 | Release v2.0.0 (8ec14f1)</a>
+Last modified March 2, 2022: <a href=https://github.com/Clymene-project/clymene-project.github.io/commit/933df6a139b9080e9576868fd3f76c830b0c6396>#45 | Release v2.0.0 (933df6a)</a>
 </div></div></main></div></div><footer class="bg-dark py-5 row d-print-none">
 <div class="container-fluid mx-sm-5">
 <div class=row>
