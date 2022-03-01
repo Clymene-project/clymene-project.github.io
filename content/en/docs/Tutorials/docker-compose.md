@@ -18,8 +18,8 @@ services:
       - "15691:15691"
       - "15692:15692"
     environment:
-      - TS_STORAGE_TYPE=kafka # database you want to use
-      # - TS_STORAGE_TYPE=gateway
+      - STORAGE_TYPE=kafka # database you want to use
+      # - STORAGE_TYPE=gateway
     volumes:
       - ./config/clymene_scrape_config.yml:/etc/clymene/clymene.yml
     command:
@@ -55,8 +55,8 @@ services:
     ports:
       - "15694:15694"
     environment:
-      # - TS_STORAGE_TYPE=elasticsearch,prometheus   # use composite writer
-      - TS_STORAGE_TYPE=elasticsearch
+      # - STORAGE_TYPE=elasticsearch,prometheus   # use composite writer
+      - STORAGE_TYPE=elasticsearch
     command:
       - --log-level=debug
       - --kafka.consumer.brokers=[KAFKA-IP]:9092
@@ -74,7 +74,7 @@ services:
     ports:
       - "15610:15610"
     environment:
-      - TS_STORAGE_TYPE=elasticsearch
+      - STORAGE_TYPE=elasticsearch
     command:
       - --log-level=debug
       - --es.server-urls=http://[ELASTICSEARCH-IP]:9200

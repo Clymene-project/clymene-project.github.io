@@ -39,7 +39,7 @@ spec:
             - --log-level=info
             # - --gateway.grpc.host-port=clymene-gateway:15610
           env:
-            - name: TS_STORAGE_TYPE
+            - name: STORAGE_TYPE
               value: kafka
 #              value: gateway
           volumeMounts:
@@ -271,7 +271,7 @@ spec:
             - --log-level=info
             - --kafka.consumer.brokers=clymene-kafka-broker:9092
           env:
-            - name: TS_STORAGE_TYPE
+            - name: STORAGE_TYPE
               value: prometheus
       securityContext:
         runAsUser: 1000
@@ -308,7 +308,7 @@ spec:
             - --es.server-urls=http://[ELASTICSEARCH-IP]:9200
             - --log-level=info
           env:
-            - name: TS_STORAGE_TYPE
+            - name: STORAGE_TYPE
               value: elasticsearch
       securityContext:
         runAsUser: 1000

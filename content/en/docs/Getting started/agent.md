@@ -69,39 +69,39 @@ curl -XPOST http://clymene-agent:15692/api/reload
 
 ElasticSearch
 ```
-TS_STORAGE_TYPE=elasticsearch
+STORAGE_TYPE=elasticsearch
 ```
 Kafka
 ```
-TS_STORAGE_TYPE=kafka
+STORAGE_TYPE=kafka
 ```
 prometheus
 ```
-TS_STORAGE_TYPE=prometheus
+STORAGE_TYPE=prometheus
 ```
 cortex
 ```
-TS_STORAGE_TYPE=cortex
+STORAGE_TYPE=cortex
 ```
 gateway
 ```
-TS_STORAGE_TYPE=gateway
+STORAGE_TYPE=gateway
 ```
 opentsdb
 ```
-TS_STORAGE_TYPE=opentsdb
+STORAGE_TYPE=opentsdb
 ```
 influxdb
 ```
-TS_STORAGE_TYPE=influxdb
+STORAGE_TYPE=influxdb
 ```
 tdengine
 ```
-TS_STORAGE_TYPE=tdengine
+STORAGE_TYPE=tdengine
 ```
 Several
 ```
-TS_STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
+STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
 ```
 
 ##### 2. Option description by storage type
