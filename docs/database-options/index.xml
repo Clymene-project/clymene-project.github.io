@@ -1,26 +1,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Database Options</title><link>/docs/database-options/</link><description>Recent content in Database Options on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/database-options/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
 &lt;h3 id="clymene-gateway-options">clymene-gateway Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--gateway.grpc.discovery.min-peers int Max number of collectors to which the agent will try to connect at any given time (default 3)
---gateway.grpc.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;quot;localhost:15610&amp;quot;)
+--gateway.grpc.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;#34;localhost:15610&amp;#34;)
 --gateway.grpc.retry.max uint Sets the maximum number of retries for a call (default 3)
 --gateway.grpc.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
 --gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
 --gateway.grpc.tls.enabled Enable TLS when talking to the remote server(s)
 --gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
 --gateway.grpc.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---gateway.grpc.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
+--gateway.grpc.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
 --gateway.http.max-err-msg-len int Maximum length of error message (default 256)
 --gateway.http.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
---gateway.http.url string the clymene-gateway remote write HTTP receiver endpoint(/api/metrics) (default &amp;quot;http://localhost:15611/api/metrics&amp;quot;)
---gateway.http.user.agent string User-Agent in request header (default &amp;quot;Clymene/&amp;quot;)
---gateway.service-type string gateway service type(grpc or http) (default &amp;quot;grpc&amp;quot;)
+--gateway.http.url string the clymene-gateway remote write HTTP receiver endpoint(/api/metrics) (default &amp;#34;http://localhost:15611/api/metrics&amp;#34;)
+--gateway.http.user.agent string User-Agent in request header (default &amp;#34;Clymene/&amp;#34;)
+--gateway.service-type string gateway service type(grpc or http) (default &amp;#34;grpc&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Cortex Options</title><link>/docs/database-options/cortex/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/cortex/</guid><description>
 &lt;h3 id="cortex-options">Cortex Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--cortex.distributor.kafka.encoding string Encoding of metric (&amp;quot;json&amp;quot; or &amp;quot;protobuf&amp;quot;) sent to kafka. (default &amp;quot;protobuf&amp;quot;)
+&lt;pre tabindex="0">&lt;code>--cortex.distributor.kafka.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
 --cortex.distributor.max.err.msg.len int Maximum length of error message (default 256)
 --cortex.distributor.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
---cortex.distributor.url string the cortex distributor remote write receiver endpoint(/api/v1/push) (default &amp;quot;http://localhost/api/v1/push&amp;quot;)
---cortex.distributor.user.agent string User-Agent in request header (default &amp;quot;Prometheus/&amp;quot;)
+--cortex.distributor.url string the cortex distributor remote write receiver endpoint(/api/v1/push) (default &amp;#34;http://localhost/api/v1/push&amp;#34;)
+--cortex.distributor.user.agent string User-Agent in request header (default &amp;#34;Prometheus/&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: ElasticSearch Options</title><link>/docs/database-options/elasticsearch/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/elasticsearch/</guid><description>
 &lt;h3 id="elasticsearch-options">ElasticSearch Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--es-archive.bulk.actions int The number of requests that can be enqueued before the bulk processor decides to commit (default 1000)
@@ -28,11 +28,11 @@
 --es-archive.bulk.size int The number of bytes that the bulk requests can take up before the bulk processor decides to commit (default 5000000)
 --es-archive.bulk.workers int The number of workers that are able to receive bulk requests and eventually commit them to Elasticsearch (default 1)
 --es-archive.enabled Enable extra storage
---es-archive.log-level string The Elasticsearch client log-level. Valid levels: [debug, info, error] (default &amp;quot;error&amp;quot;)
+--es-archive.log-level string The Elasticsearch client log-level. Valid levels: [debug, info, error] (default &amp;#34;error&amp;#34;)
 --es-archive.max-doc-count int The maximum document count to return from an Elasticsearch query. This will also apply to aggregations. (default 10000)
 --es-archive.password string The password required by Elasticsearch
 --es-archive.remote-read-clusters string Comma-separated list of Elasticsearch remote cluster names for cross-cluster querying.See Elasticsearch remote clusters and cross-cluster query api.
---es-archive.server-urls string The comma-separated list of Elasticsearch servers, must be full url i.e. http://localhost:9200 (default &amp;quot;http://127.0.0.1:9200&amp;quot;)
+--es-archive.server-urls string The comma-separated list of Elasticsearch servers, must be full url i.e. http://localhost:9200 (default &amp;#34;http://127.0.0.1:9200&amp;#34;)
 --es-archive.sniffer The sniffer config for Elasticsearch; client uses sniffing process to find all nodes automatically, disable if not required
 --es-archive.sniffer-tls-enabled Option to enable TLS when sniffing an Elasticsearch Cluster ; client uses sniffing process to find all nodes automatically, disabled by default
 --es-archive.timeout duration Timeout used for queries. A Timeout of zero means no timeout (default 0s)
@@ -41,7 +41,7 @@
 --es-archive.tls.enabled Enable TLS when talking to the remote server(s)
 --es-archive.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
 --es-archive.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---es-archive.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
+--es-archive.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
 --es-archive.token-file string Path to a file containing bearer token. This flag also loads CA if it is specified.
 --es-archive.username string The username required by Elasticsearch. The basic authentication also loads CA if it is specified.
 --es-archive.version uint The major Elasticsearch version. If not specified, the value will be auto-detected from Elasticsearch.
@@ -49,11 +49,11 @@
 --es.bulk.flush-interval duration A time.Duration after which bulk requests are committed, regardless of other thresholds. Set to zero to disable. By default, this is disabled. (default 200ms)
 --es.bulk.size int The number of bytes that the bulk requests can take up before the bulk processor decides to commit (default 5000000)
 --es.bulk.workers int The number of workers that are able to receive bulk requests and eventually commit them to Elasticsearch (default 1)
---es.log-level string The Elasticsearch client log-level. Valid levels: [debug, info, error] (default &amp;quot;error&amp;quot;)
+--es.log-level string The Elasticsearch client log-level. Valid levels: [debug, info, error] (default &amp;#34;error&amp;#34;)
 --es.max-doc-count int The maximum document count to return from an Elasticsearch query. This will also apply to aggregations. (default 10000)
 --es.password string The password required by Elasticsearch
 --es.remote-read-clusters string Comma-separated list of Elasticsearch remote cluster names for cross-cluster querying.See Elasticsearch remote clusters and cross-cluster query api.
---es.server-urls string The comma-separated list of Elasticsearch servers, must be full url i.e. http://localhost:9200 (default &amp;quot;http://127.0.0.1:9200&amp;quot;)
+--es.server-urls string The comma-separated list of Elasticsearch servers, must be full url i.e. http://localhost:9200 (default &amp;#34;http://127.0.0.1:9200&amp;#34;)
 --es.sniffer The sniffer config for Elasticsearch; client uses sniffing process to find all nodes automatically, disable if not required
 --es.sniffer-tls-enabled Option to enable TLS when sniffing an Elasticsearch Cluster ; client uses sniffing process to find all nodes automatically, disabled by default
 --es.timeout duration Timeout used for queries. A Timeout of zero means no timeout (default 0s)
@@ -62,12 +62,12 @@
 --es.tls.enabled Enable TLS when talking to the remote server(s)
 --es.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
 --es.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---es.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
+--es.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
 --es.token-file string Path to a file containing bearer token. This flag also loads CA if it is specified.
 --es.username string The username required by Elasticsearch. The basic authentication also loads CA if it is specified.
 --es.version uint The major Elasticsearch version. If not specified, the value will be auto-detected from Elasticsearch.
---es.clymene-agent.index.name string Set the index name to save the metrics collected by clymene-agent. (default &amp;quot;clymene-metrics&amp;quot;)
---es.clymene-promtail.index.name string Set the index name to save the log collected by clymene-promtail. (default &amp;quot;clymene-logs&amp;quot;)
+--es.clymene-agent.index.name string Set the index name to save the metrics collected by clymene-agent. (default &amp;#34;clymene-metrics&amp;#34;)
+--es.clymene-promtail.index.name string Set the index name to save the log collected by clymene-promtail. (default &amp;#34;clymene-logs&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: InfluxDB Options</title><link>/docs/database-options/influxdb/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/influxdb/</guid><description>
 &lt;h3 id="influxdb-options">InfluxDB Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--influxdb.bucket string influx bucket, A bucket is a named location where time series data is stored
@@ -78,9 +78,9 @@
 --influxdb.tls.enabled Enable TLS when talking to the remote server(s)
 --influxdb.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
 --influxdb.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---influxdb.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
+--influxdb.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
 --influxdb.token string Use the Authorization header and the Token scheme
---influxdb.url string the influxdb url (default &amp;quot;http://localhost:8086&amp;quot;)
+--influxdb.url string the influxdb url (default &amp;#34;http://localhost:8086&amp;#34;)
 --influxdb.write.batch-size uint Maximum number of points sent to server in single request (default 5000)
 --influxdb.write.default-tags string Tags added to each point during writing. separated by , (TAG1=VALUE1,TAG2=VALUE2)
 --influxdb.write.exponential-base uint The base for the exponential retry delay (default 2)
@@ -94,73 +94,73 @@
 --influxdb.write.use-gzip Whether to use GZip compression in requests
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Kafka Options</title><link>/docs/database-options/kafka/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/kafka/</guid><description>
 &lt;h3 id="kafka-options">Kafka Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--kafka.producer.authentication string Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &amp;quot;none&amp;quot;)
+&lt;pre tabindex="0">&lt;code>--kafka.producer.authentication string Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default &amp;#34;none&amp;#34;)
 --kafka.producer.batch-linger duration (experimental) Time interval to wait before sending records to Kafka. Higher value reduce request to Kafka but increase latency and the possibility of data loss in case of process restart. See https://kafka.apache.org/documentation/ (default 0s)
 --kafka.producer.batch-max-messages int (experimental) Maximum number of message to batch before sending records to Kafka
 --kafka.producer.batch-min-messages int (experimental) The best-effort minimum number of messages needed to send a batch of records to Kafka. Higher value reduce request to Kafka but increase latency and the possibility of data loss in case of process restart. See https://kafka.apache.org/documentation/
 --kafka.producer.batch-size int (experimental) Number of bytes to batch before sending records to Kafka. Higher value reduce request to Kafka but increase latency and the possibility of data loss in case of process restart. See https://kafka.apache.org/documentation/
---kafka.producer.brokers string The comma-separated list of kafka brokers. i.e. '127.0.0.1:9092,0.0.0:1234' (default &amp;quot;127.0.0.1:9092&amp;quot;)
---kafka.producer.compression string (experimental) Type of compression (none, gzip, snappy, lz4, zstd) to use on messages (default &amp;quot;none&amp;quot;)
+--kafka.producer.brokers string The comma-separated list of kafka brokers. i.e. &amp;#39;127.0.0.1:9092,0.0.0:1234&amp;#39; (default &amp;#34;127.0.0.1:9092&amp;#34;)
+--kafka.producer.compression string (experimental) Type of compression (none, gzip, snappy, lz4, zstd) to use on messages (default &amp;#34;none&amp;#34;)
 --kafka.producer.compression-level int (experimental) compression level to use on messages. gzip = 1-9 (default = 6), snappy = none, lz4 = 1-17 (default = 9), zstd = -131072 - 22 (default = 3)
---kafka.producer.encoding string Encoding of metric (&amp;quot;json&amp;quot; or &amp;quot;protobuf&amp;quot;) sent to kafka. (default &amp;quot;protobuf&amp;quot;)
---kafka.producer.kerberos.config-file string Path to Kerberos configuration. i.e /etc/krb5.conf (default &amp;quot;/etc/krb5.conf&amp;quot;)
---kafka.producer.kerberos.keytab-file string Path to keytab file. i.e /etc/security/kafka.keytab (default &amp;quot;/etc/security/kafka.keytab&amp;quot;)
+--kafka.producer.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
+--kafka.producer.kerberos.config-file string Path to Kerberos configuration. i.e /etc/krb5.conf (default &amp;#34;/etc/krb5.conf&amp;#34;)
+--kafka.producer.kerberos.keytab-file string Path to keytab file. i.e /etc/security/kafka.keytab (default &amp;#34;/etc/security/kafka.keytab&amp;#34;)
 --kafka.producer.kerberos.password string The Kerberos password used for authenticate with KDC
 --kafka.producer.kerberos.realm string Kerberos realm
---kafka.producer.kerberos.service-name string Kerberos service name (default &amp;quot;kafka&amp;quot;)
+--kafka.producer.kerberos.service-name string Kerberos service name (default &amp;#34;kafka&amp;#34;)
 --kafka.producer.kerberos.use-keytab Use of keytab instead of password, if this is true, keytab file will be used instead of password
 --kafka.producer.kerberos.username string The Kerberos username used for authenticate with KDC
---kafka.producer.plaintext.mechanism string The plaintext Mechanism for SASL/PLAIN authentication, e.g. 'SCRAM-SHA-256' or 'SCRAM-SHA-512' or 'PLAIN' (default &amp;quot;PLAIN&amp;quot;)
+--kafka.producer.plaintext.mechanism string The plaintext Mechanism for SASL/PLAIN authentication, e.g. &amp;#39;SCRAM-SHA-256&amp;#39; or &amp;#39;SCRAM-SHA-512&amp;#39; or &amp;#39;PLAIN&amp;#39; (default &amp;#34;PLAIN&amp;#34;)
 --kafka.producer.plaintext.password string The plaintext Password for SASL/PLAIN authentication
 --kafka.producer.plaintext.username string The plaintext Username for SASL/PLAIN authentication
 --kafka.producer.protocol-version string Kafka protocol version - must be supported by kafka server
---kafka.producer.required-acks string (experimental) Required kafka broker acknowledgement. i.e. noack, local, all (default &amp;quot;local&amp;quot;)
+--kafka.producer.required-acks string (experimental) Required kafka broker acknowledgement. i.e. noack, local, all (default &amp;#34;local&amp;#34;)
 --kafka.producer.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
 --kafka.producer.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
 --kafka.producer.tls.enabled Enable TLS when talking to the remote server(s)
 --kafka.producer.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
 --kafka.producer.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---kafka.producer.tls.skip-host-verify (insecure) Skip server's certificate chain and host name verification
---kafka.producer.topic string The name of the kafka topic (default &amp;quot;clymene&amp;quot;)
+--kafka.producer.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
+--kafka.producer.topic string The name of the kafka topic (default &amp;#34;clymene&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Loki Options</title><link>/docs/database-options/loki/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/loki/</guid><description>
 &lt;p>Loki storage is only available for clymene-promtail&lt;/p>
 &lt;h3 id="loki-options">Loki Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--loki.client.timeout duration Maximum time to wait for server to respond to a request (default 10s)
---loki.client.url string URL of log server (default &amp;quot;http://localhost:3100/loki/api/v1/push&amp;quot;)
+--loki.client.url string URL of log server (default &amp;#34;http://localhost:3100/loki/api/v1/push&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: OpenTSDB Options</title><link>/docs/database-options/opentsdb/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/opentsdb/</guid><description>
 &lt;h3 id="opentsdb-options">OpenTSDB Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--opentsdb.dry-run Don't actually send anything to the TSD, just print the datapoints.
---opentsdb.host string Hostname to use to connect to the TSD. (default &amp;quot;localhost&amp;quot;)
---opentsdb.hosts string List of host:port to connect to tsd's (comma separated)
---opentsdb.http Send the data via the http interface (default 'false')
---opentsdb.http-api-path string URL path to use for HTTP requests to TSD. (default &amp;quot;api/put&amp;quot;)
+&lt;pre tabindex="0">&lt;code>--opentsdb.dry-run Don&amp;#39;t actually send anything to the TSD, just print the datapoints.
+--opentsdb.host string Hostname to use to connect to the TSD. (default &amp;#34;localhost&amp;#34;)
+--opentsdb.hosts string List of host:port to connect to tsd&amp;#39;s (comma separated)
+--opentsdb.http Send the data via the http interface (default &amp;#39;false&amp;#39;)
+--opentsdb.http-api-path string URL path to use for HTTP requests to TSD. (default &amp;#34;api/put&amp;#34;)
 --opentsdb.http-password string Password to use for HTTP Basic Auth when sending the data via HTTP
 --opentsdb.http-username string Username to use for HTTP Basic Auth when sending the data via HTTP
 --opentsdb.max-chunk int The maximum request body size to support for incoming HTTP requests when chunking is enabled (default 512)
 --opentsdb.max-tags int The maximum number of tags to send to our TSD Instances (default 8)
 --opentsdb.port int Port to connect to the TSD instance on (default 4242)
---opentsdb.ssl Enable SSL - used in conjunction with http (default 'false')
+--opentsdb.ssl Enable SSL - used in conjunction with http (default &amp;#39;false&amp;#39;)
 --opentsdb.timeout duration Time out when doing http insert(sec, default 10 sec) (default 10s)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Prometheus Options</title><link>/docs/database-options/prometheus/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/prometheus/</guid><description>
 &lt;h3 id="prometheus-options">Prometheus Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;quot;:15690&amp;quot;)
---gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default &amp;quot;:15610&amp;quot;)
+&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;#34;:15690&amp;#34;)
+--gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway&amp;#39;s GRPC server (default &amp;#34;:15610&amp;#34;)
 --gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
 --gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
 --gateway.grpc.tls.enabled Enable TLS on the server
 --gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
---log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;quot;info&amp;quot;)
---prometheus.remote.kafka.encoding string Encoding of metric (&amp;quot;json&amp;quot; or &amp;quot;protobuf&amp;quot;) sent to kafka. (default &amp;quot;protobuf&amp;quot;)
+--log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;#34;info&amp;#34;)
+--prometheus.remote.kafka.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
 --prometheus.remote.max.err.msg.len int Maximum length of error message (default 256)
 --prometheus.remote.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
---prometheus.remote.url string the prometheus remote write receiver endpoint(/api/v1/write) (default &amp;quot;http://localhost:9090/api/v1/write&amp;quot;)
---prometheus.remote.user.agent string User-Agent in request header (default &amp;quot;Prometheus/&amp;quot;)
+--prometheus.remote.url string the prometheus remote write receiver endpoint(/api/v1/write) (default &amp;#34;http://localhost:9090/api/v1/write&amp;#34;)
+--prometheus.remote.user.agent string User-Agent in request header (default &amp;#34;Prometheus/&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: TDengine Options</title><link>/docs/database-options/tdengine/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/tdengine/</guid><description>
 &lt;h3 id="tdengine-options">TDengine Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--tdengine.dbname string Destination database (default &amp;quot;clymene&amp;quot;)
---tdengine.hostname string The host to connect to TDengine server. (default &amp;quot;127.0.0.1&amp;quot;)
+&lt;pre tabindex="0">&lt;code>--tdengine.dbname string Destination database (default &amp;#34;clymene&amp;#34;)
+--tdengine.hostname string The host to connect to TDengine server. (default &amp;#34;127.0.0.1&amp;#34;)
 --tdengine.max-sql-length int Number of SQLs that can be sent at one time (default 4096)
---tdengine.password string The password to use when connecting to the server (default &amp;quot;taosdata&amp;quot;)
+--tdengine.password string The password to use when connecting to the server (default &amp;#34;taosdata&amp;#34;)
 --tdengine.server-port int he HTTP port number to use for the connection to TDengine server (default 6041)
---tdengine.user string The TDengine user name to use when connecting to the server (default &amp;quot;root&amp;quot;)
+--tdengine.user string The TDengine user name to use when connecting to the server (default &amp;#34;root&amp;#34;)
 &lt;/code>&lt;/pre></description></item></channel></rss>
