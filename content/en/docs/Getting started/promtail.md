@@ -1,10 +1,10 @@
 ---
 categories: ["Examples"]
 tags: ["test", "sample", "docs"]
-title: "Clymene-promtail Getting Start"
-linkTitle: "Clymene Promtail"
+title: "Promtail Agent Getting Start"
+linkTitle: "Promtail Agent"
 date: 2017-01-18
-weight: 2
+weight: 4
 description: >
   The Clymene-promtail customized loki's log collection agent for the Clymene project.
 ---
@@ -90,17 +90,22 @@ Loki
 STORAGE_TYPE=loki
 ```
 
-[//]: # (Kafka)
+Promtail-gateway
+```
+STORAGE_TYPE=gateway
+```
 
-[//]: # (```)
+Kafka
+```
+STORAGE_TYPE=kafka
+```
 
-[//]: # (STORAGE_TYPE=kafka)
-
-[//]: # (```)
 #### 2. Option description by storage type
 
 - [ElasticSearch option](http://clymene-project.github.io/docs/database-options/elasticsearch)
 - [Loki option](http://clymene-project.github.io/docs/database-options/loki)
+- [Kafka option](http://clymene-project.github.io/docs/database-options/kafka)
+- [Promtail-gateway](http://clymene-project.github.io/docs/database-options/gateway)
 
 ### Docker-compose Example
 ```yaml
@@ -166,10 +171,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: clymene-agent
+  name: clymene-promtail
   namespace: clymene
   labels:
-    app: clymene-agent
+    app: clymene-promtail
 spec:
   ports:
     - name: admin
@@ -179,7 +184,7 @@ spec:
       port: 9080
       targetPort: 9080
   selector:
-    app: clymene-agent
+    app: clymene-promtail
 --- # configmap.yaml
 apiVersion: v1
 kind: ConfigMap
@@ -191,10 +196,10 @@ data:
     server:
       http_listen_port: 9080
       grpc_listen_port: 0
-    
+
     positions:
       filename: /tmp/positions.yaml
-    
+
     scrape_configs:
       - job_name: system
         static_configs:
@@ -203,7 +208,7 @@ data:
             labels:
               job: varlogs
               __path__: /var/log/*log
-    
+
       - job_name: kafka-sasl-plain
         kafka:
           use_incoming_timestamp: false

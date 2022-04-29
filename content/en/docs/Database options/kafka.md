@@ -38,6 +38,7 @@ description: >
 --kafka.producer.tls.server-name string         Override the TLS server name we expect in the certificate of the remote server(s)
 --kafka.producer.tls.skip-host-verify           (insecure) Skip server's certificate chain and host name verification
 --kafka.producer.topic string                   The name of the kafka topic (default "clymene")
+--kafka.producer.promtail.topic string          The name of the promtail kafka topic to consume from (default "clymene-logs")
 
 ```
 
