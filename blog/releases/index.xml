@@ -1,12 +1,18 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – New Releases</title><link>/blog/releases/</link><description>Recent content in New Releases on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.0.0 (2022-02-20)</title><link>/blog/2022/02/20/2.0.0-2022-02-20/</link><pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><guid>/blog/2022/02/20/2.0.0-2022-02-20/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – New Releases</title><link>/blog/releases/</link><description>Recent content in New Releases on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.1.0 (2022-04-30)</title><link>/blog/2022/04/29/2.1.0-2022-04-30/</link><pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate><guid>/blog/2022/04/29/2.1.0-2022-04-30/</guid><description>
+&lt;ol>
+&lt;li>gateway, influxdb, opentsdb, tdengine success/failure metric integration completed issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/40">#40&lt;/a>&lt;/li>
+&lt;li>Added promtail-ingester component that can use kafka to promtail&amp;rsquo;s log transfer backend &lt;a href="https://github.com/Clymene-project/Clymene/issues/47">#47&lt;/a>&lt;/li>
+&lt;li>promtail - log data transfer to gateway(gRPC, HTTP) &lt;a href="https://github.com/Clymene-project/Clymene/issues/46">#46&lt;/a>&lt;/li>
+&lt;li>Development of promtail-gateway component for log data pipeline &lt;a href="https://github.com/Clymene-project/Clymene/issues/53">#53&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Blog: 2.0.1 (2022-02-21)</title><link>/blog/2022/02/21/2.0.1-2022-02-21/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>/blog/2022/02/21/2.0.1-2022-02-21/</guid><description>
+&lt;p>Added missing tenantID when saving to elasticsearch with clymene-promtail.&lt;/p></description></item><item><title>Blog: 2.0.0 (2022-02-20)</title><link>/blog/2022/02/20/2.0.0-2022-02-20/</link><pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><guid>/blog/2022/02/20/2.0.0-2022-02-20/</guid><description>
 &lt;p>A log collection agent, promtail, is now available. Collected logs can be stored in loki and elasticsearch.&lt;/p>
 &lt;ol>
 &lt;li>Add log collection component clymene-promtail issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/41">#41&lt;/a>&lt;/li>
 &lt;li>Added http receiver function to send/receive gateway metricWriter to http issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/37">#37&lt;/a>&lt;/li>
 &lt;li>Add elasticsearch index name change option issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/44">#44&lt;/a>&lt;/li>
 &lt;li>Logs collected by clymene-promtail can be stored in elasticsearch issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/43">#43&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title>Blog: 2.0.1 (2022-02-20)</title><link>/blog/2022/02/20/2.0.1-2022-02-20/</link><pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><guid>/blog/2022/02/20/2.0.1-2022-02-20/</guid><description>
-&lt;p>Added missing tenantID when saving to elasticsearch with clymene-promtail.&lt;/p></description></item><item><title>Blog: 1.5.0 (2022-01-30)</title><link>/blog/2022/01/30/1.5.0-2022-01-30/</link><pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/30/1.5.0-2022-01-30/</guid><description>
+&lt;/ol></description></item><item><title>Blog: 1.5.0 (2022-01-30)</title><link>/blog/2022/01/30/1.5.0-2022-01-30/</link><pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/01/30/1.5.0-2022-01-30/</guid><description>
 &lt;p>Updated Clymene&amp;rsquo;s service discovery feature. For details, please check the clymene official docs(&lt;a href="https://clymene-project.github.io/docs/service-discovery/configuration/">https://clymene-project.github.io/docs/service-discovery/configuration/&lt;/a>)&lt;/p>
 &lt;ol>
 &lt;li>kuma(&lt;a href="https://kuma.io/">https://kuma.io/&lt;/a>)&lt;/li>
