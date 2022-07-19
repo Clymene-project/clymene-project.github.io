@@ -13,7 +13,7 @@ Promtail ingester is an optional service responsible for insert logs data loaded
 1. Kafka message consume
 2. logs data insert to Database(ElasticSearch, Loki, ETC) (Optional)
 
-## How to setting kafka consumer
+## How to setting promtail-ingester
 
 ```
 --admin.http.host-ports string                  The host:ports (e.g. 127.0.0.1:15694 or :15694) for the admin server, including health check, /metrics, etc. (default ":15694")

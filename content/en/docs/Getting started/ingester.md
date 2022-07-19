@@ -13,7 +13,7 @@ The Clymene ingester is an optional service responsible for insert time series d
 1. Kafka message consume
 2. Time-series data insert to Database(ElasticSearch, Prometheus, ETC) (Optional)
 
-### How to setting ingester
+### How to setting clymene-ingester
 
 ```
 --kafka.consumer.authentication string          Authentication type used to authenticate with kafka cluster. e.g. none, kerberos, tls, plaintext (default "none")

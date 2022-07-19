@@ -1,5 +1,5 @@
 ---
-title: Configuration
+title: clymene-config
 sort_rank: 1
 ---
 

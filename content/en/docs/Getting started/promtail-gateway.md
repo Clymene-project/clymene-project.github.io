@@ -13,7 +13,7 @@ The Promtail Gateway is an optional service that can receive logs data from the 
 1. gRPC, HTTP Service
 2. Logs data insert to Database(ElasticSearch, Loki, ETC) (Optional)
 
-## How to setting gateway
+## How to setting promtail-gateway
 ```
 --admin.http.host-ports string              The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default ":15690")
 --gateway.grpc-server.host-port string      The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway's GRPC server (default ":15610")

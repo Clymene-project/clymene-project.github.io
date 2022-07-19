@@ -53,7 +53,7 @@ curl -XPOST http://clymene-agent:15692/api/reload
   {"level":"info","ts":1643299385.1012235,"caller":"config/config.go:468","msg":"Completed loading of configuration file","filename":"clymene_agent.yml"}
 ```
 
-### How to setting gateway
+### How to setting clymene-agent
 
 ```
 --admin.http.host-ports string           The host:ports (e.g. 127.0.0.1:15691 or :15691) for the admin server, including health check, /metrics, etc. (default ":15691")
