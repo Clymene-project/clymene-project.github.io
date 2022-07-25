@@ -63,6 +63,7 @@ curl -XPOST http://clymene-agent:15692/api/reload
 --log-level string                       Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default "info")
 --metrics-backend string                 Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default "prometheus")
 --metrics-http-route string              Defines the route of HTTP endpoint for metrics backends that support scraping (default "/metrics")
+--metric.split.length                    split length for metric transmission (default 1024)
 ```
 ### How to set up the Storage Type
 ##### 1. Setting environmental variables
