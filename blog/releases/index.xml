@@ -1,4 +1,22 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – New Releases</title><link>/blog/releases/</link><description>Recent content in New Releases on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.1.0 (2022-04-30)</title><link>/blog/2022/04/29/2.1.0-2022-04-30/</link><pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate><guid>/blog/2022/04/29/2.1.0-2022-04-30/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – New Releases</title><link>/blog/releases/</link><description>Recent content in New Releases on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.1.1 (2022-07-26)</title><link>/blog/2022/07/26/2.1.1-2022-07-26/</link><pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate><guid>/blog/2022/07/26/2.1.1-2022-07-26/</guid><description>
+&lt;ol>
+&lt;li>Added split option when sending time series issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/58">#58&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>You can control how much metric is sent at one time.&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>Fixed bug when using gateway and inester kafka &lt;a href="https://github.com/Clymene-project/Clymene/issues/57">#57&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Fixed a bug in clymene-ingester. Now you can use it normally&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>modify elasticsearch timestamp convert &lt;a href="https://github.com/Clymene-project/Clymene/issues/61">#61&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>You can specify it as timestamp in elasticsearch&lt;/li>
+&lt;/ul></description></item><item><title>Blog: 2.1.0 (2022-04-30)</title><link>/blog/2022/04/29/2.1.0-2022-04-30/</link><pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate><guid>/blog/2022/04/29/2.1.0-2022-04-30/</guid><description>
 &lt;ol>
 &lt;li>gateway, influxdb, opentsdb, tdengine success/failure metric integration completed issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/40">#40&lt;/a>&lt;/li>
 &lt;li>Added promtail-ingester component that can use kafka to promtail&amp;rsquo;s log transfer backend &lt;a href="https://github.com/Clymene-project/Clymene/issues/47">#47&lt;/a>&lt;/li>
