@@ -100,6 +100,14 @@ tdengine
 ```
 STORAGE_TYPE=tdengine
 ```
+druid
+```
+# env setting
+STORAGE_TYPE=kafka
+# arg
+--kafka.producer.encoding=json
+--kafka.producer.flatten-for-druid
+```
 Several
 ```
 STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple databases at the same time.
@@ -114,6 +122,7 @@ STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple dat
 - [Opentsdb option](http://clymene-project.github.io/docs/database-options/opentsdb)
 - [influxdb option](http://clymene-project.github.io/docs/database-options/influxdb)
 - [TDengine options](http://clymene-project.github.io/docs/database-options/tdengine)
+- [Druid usage](http://clymene-project.github.io/docs/database-options/druid)
 
 
 ### Use only agent Architecture
