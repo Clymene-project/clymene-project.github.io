@@ -87,4 +87,4 @@ STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple dat
 - [Druid usage](http://clymene-project.github.io/docs/database-options/druid)
 
 ### Use gateway Architecture
-<img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway">
+<img src="https://user-images.githubusercontent.com/25188468/214289870-3ed5c5d9-c831-40b4-8216-169eb8c2786c.png" width="70%" height="70%">

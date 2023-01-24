@@ -117,5 +117,5 @@ STORAGE_TYPE=elasticsearch,prometheus  # composite write - Write in multiple dat
 
 
 ### Including kafka and ingester Architecture
-<img src="https://user-images.githubusercontent.com/25188468/152248986-a2835944-4aba-4acc-a1b5-3d430197da1b.png" width="70%" height="70%" alt="architecture_v1.4.0_ingester">  
+<img src="https://user-images.githubusercontent.com/25188468/214290346-9bd963ef-f28f-42e7-bd03-db3ef15bc245.png" width="70%" height="70%">  
 

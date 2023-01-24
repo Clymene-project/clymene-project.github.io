@@ -267,5 +267,5 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-### Use Log collection agent
-<img src="https://user-images.githubusercontent.com/25188468/154828122-19509c86-d7e3-449f-9a6e-3a5d96fb9a60.png" width="70%" height="70%" alt="architecture_v2.0.0">
+### Use only agent Architecture
+<img src="https://user-images.githubusercontent.com/25188468/214289679-b381fc33-7e8a-4fae-a4ec-79b46ce57dc1.png" width="70%" height="70%">

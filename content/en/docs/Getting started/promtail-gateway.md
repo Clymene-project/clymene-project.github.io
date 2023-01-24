@@ -111,3 +111,6 @@ spec:
       securityContext:
         runAsUser: 1000
 ```
+
+### Use gateway Architecture
+<img src="https://user-images.githubusercontent.com/25188468/214289870-3ed5c5d9-c831-40b4-8216-169eb8c2786c.png" width="70%" height="70%">
