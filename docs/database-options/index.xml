@@ -1,4 +1,21 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Database Options</title><link>/docs/database-options/</link><description>Recent content in Database Options on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/database-options/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Database Options</title><link>/docs/database-options/</link><description>Recent content in Database Options on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/database-options/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Druid usage</title><link>/docs/database-options/druid/</link><pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/database-options/druid/</guid><description>
+&lt;h3 id="environment-value-setting">Environment value setting&lt;/h3>
+&lt;pre tabindex="0">&lt;code>STORAGE_TYPE=kafka
+&lt;/code>&lt;/pre>&lt;h3 id="arguments-setting-example">arguments setting example&lt;/h3>
+&lt;pre tabindex="0">&lt;code>--kafka.producer.brokers=BROKER_IP:9092
+--kafka.producer.encoding=json
+--kafka.producer.flatten-for-druid
+&lt;/code>&lt;/pre>&lt;h3 id="1-druid-streaming-setting">1. druid Streaming setting&lt;/h3>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/25188468/214283285-1c01f945-ac8d-4a2d-806a-1f440e065f26.png" alt="image">&lt;br>
+&lt;img src="https://user-images.githubusercontent.com/25188468/214283446-c82c9773-5158-4e26-b2a6-93584a64cf62.png" alt="image">
+&lt;img src="https://user-images.githubusercontent.com/25188468/214283549-a59a23a5-9ece-4d11-ab4e-04c8c40be0d3.png" alt="image">&lt;/p>
+&lt;h3 id="2-tune-setting---use-earliest-offset--true">2. Tune setting - Use earliest offset : true&lt;/h3>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/25188468/214284118-0463dbd2-a082-4c00-b025-e1723f23c25d.png" alt="image">&lt;/p>
+&lt;h3 id="3-check-ingest-and-datasources-menu">3. Check Ingest and Datasources menu&lt;/h3>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/25188468/214284410-1a15ae03-0330-4a1a-addb-5029243a36ec.png" alt="image">&lt;br>
+&lt;img src="https://user-images.githubusercontent.com/25188468/214284518-bf7146cc-c99a-4ddd-9914-92a95bf3cf64.png" alt="image">&lt;/p>
+&lt;h3 id="4-query-execution">4. query execution&lt;/h3>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/25188468/214284893-2a444d50-144e-4716-9972-2c87d759bdd0.png" alt="image">&lt;/p></description></item><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
 &lt;h3 id="clymene-gateway-options">clymene-gateway Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code> --gateway.grpc.discovery.min-peers int Max number of collectors to which the agent will try to connect at any given time (default 3)
 --gateway.grpc.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;#34;localhost:15610&amp;#34;)
@@ -15,10 +32,6 @@
 --gateway.http.url string the clymene-gateway remote write HTTP receiver endpoint(/api/metrics) (default &amp;#34;http://localhost:15611/api/metrics&amp;#34;)
 --gateway.http.user.agent string User-Agent in request header (default &amp;#34;Clymene/&amp;#34;)
 --gateway.service-type string gateway service type(grpc or http) (default &amp;#34;grpc&amp;#34;)
--h, --help help for Clymene-promtail
---log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;#34;info&amp;#34;)
---metrics-backend string Defines which metrics backend to use for metrics reporting: expvar, prometheus, none (default &amp;#34;prometheus&amp;#34;)
---metrics-http-route string Defines the route of HTTP endpoint for metrics backends that support scraping (default &amp;#34;/metrics&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Cortex Options</title><link>/docs/database-options/cortex/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/cortex/</guid><description>
 &lt;h3 id="cortex-options">Cortex Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--cortex.distributor.kafka.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
@@ -128,6 +141,7 @@
 --kafka.producer.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
 --kafka.producer.topic string The name of the kafka topic (default &amp;#34;clymene&amp;#34;)
 --kafka.producer.promtail.topic string The name of the promtail kafka topic to consume from (default &amp;#34;clymene-logs&amp;#34;)
+--kafka.producer.flatten-for-druid flattening settings for using druid.
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Loki Options</title><link>/docs/database-options/loki/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/loki/</guid><description>
 &lt;p>Loki storage is only available for clymene-promtail&lt;/p>
 &lt;h3 id="loki-options">Loki Options&lt;/h3>

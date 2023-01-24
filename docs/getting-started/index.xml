@@ -68,6 +68,12 @@
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>druid&lt;/p>
+&lt;pre tabindex="0">&lt;code># env setting
+STORAGE_TYPE=kafka
+# arg
+--kafka.producer.encoding=json
+--kafka.producer.flatten-for-druid
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
@@ -80,6 +86,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/druid">Druid usage&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-only-agent-architecture">Use only agent Architecture&lt;/h3>
 &lt;img src="https://user-images.githubusercontent.com/25188468/152248922-8b86e107-ed16-4ec1-a68a-48e1016a7521.png" width="70%" height="70%" alt="architecture_v1.4.0"></description></item><item><title>Docs: Clymene Ingester Getting Start</title><link>/docs/getting-started/ingester/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/ingester/</guid><description>
@@ -130,6 +137,12 @@
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>druid&lt;/p>
+&lt;pre tabindex="0">&lt;code># env setting
+STORAGE_TYPE=kafka
+# arg
+--kafka.producer.encoding=json
+--kafka.producer.flatten-for-druid
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
@@ -142,6 +155,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/druid">Druid usage&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="including-kafka-and-ingester-architecture">Including kafka and ingester Architecture&lt;/h3>
 &lt;img src="https://user-images.githubusercontent.com/25188468/152248986-a2835944-4aba-4acc-a1b5-3d430197da1b.png" width="70%" height="70%" alt="architecture_v1.4.0_ingester"></description></item><item><title>Docs: Clymene Gateway Getting Start</title><link>/docs/getting-started/gateway/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/gateway/</guid><description>
@@ -181,6 +195,12 @@
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=influxdb
 &lt;/code>&lt;/pre>&lt;p>tdengine&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=tdengine
+&lt;/code>&lt;/pre>&lt;p>druid&lt;/p>
+&lt;pre tabindex="0">&lt;code># env setting
+STORAGE_TYPE=kafka
+# arg
+--kafka.producer.encoding=json
+--kafka.producer.flatten-for-druid
 &lt;/code>&lt;/pre>&lt;p>Several&lt;/p>
 &lt;pre tabindex="0">&lt;code>STORAGE_TYPE=elasticsearch,prometheus # composite write - Write in multiple databases at the same time.
 &lt;/code>&lt;/pre>&lt;h5 id="2-option-description-by-storage-type">2. Option description by storage type&lt;/h5>
@@ -193,6 +213,7 @@
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/opentsdb">Opentsdb option&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/influxdb">influxdb option&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/tdengine">TDengine options&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://clymene-project.github.io/docs/database-options/druid">Druid usage&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-gateway-architecture">Use gateway Architecture&lt;/h3>
 &lt;img src="https://user-images.githubusercontent.com/25188468/152249028-701c3372-dee8-49dd-b284-dd04e9da0597.png" width="70%" height="70%" alt="architecture_v1.4.0_gateway"></description></item><item><title>Docs: Promtail Agent Getting Start</title><link>/docs/getting-started/promtail/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/promtail/</guid><description>

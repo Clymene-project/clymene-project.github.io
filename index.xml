@@ -1,4 +1,12 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Clymene-project</title><link>/</link><description>Recent content on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.1.1 (2022-07-26)</title><link>/blog/2022/07/26/2.1.1-2022-07-26/</link><pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate><guid>/blog/2022/07/26/2.1.1-2022-07-26/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Clymene-project</title><link>/</link><description>Recent content on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.2.0 (2023-01-24)</title><link>/blog/2023/01/24/2.2.0-2023-01-24/</link><pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/01/24/2.2.0-2023-01-24/</guid><description>
+&lt;ol>
+&lt;li>Added ability to flatten json data to support druid storage &lt;a href="https://github.com/Clymene-project/Clymene/issues/76">#76&lt;/a>&lt;/li>
+&lt;li>You can use druid to store metric&lt;/li>
+&lt;/ol></description></item><item><title>Blog: 2.1.2 (2022-10-24)</title><link>/blog/2022/10/24/2.1.2-2022-10-24/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>/blog/2022/10/24/2.1.2-2022-10-24/</guid><description>
+&lt;ol>
+&lt;li>upgrade golang version(1.16 -&amp;gt; 1.18)&lt;/li>
+&lt;li>&lt;a href="https://github.com/Clymene-project/Clymene/issues/70">#70&lt;/a>) Fixed influx options error&lt;/li>
+&lt;/ol></description></item><item><title>Blog: 2.1.1 (2022-07-26)</title><link>/blog/2022/07/26/2.1.1-2022-07-26/</link><pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate><guid>/blog/2022/07/26/2.1.1-2022-07-26/</guid><description>
 &lt;ol>
 &lt;li>Added split option when sending time series issue: &lt;a href="https://github.com/Clymene-project/Clymene/issues/58">#58&lt;/a>&lt;/li>
 &lt;/ol>
