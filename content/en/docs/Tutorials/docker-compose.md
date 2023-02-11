@@ -25,7 +25,7 @@ services:
     command:
       - --log-level=debug
       - --kafka.producer.brokers=[KAFKA-IP]:9092
-      # - --gateway.grpc.host-port=localhost:15610
+      # - --gateway.grpc-client.host-port=localhost:15610
 ```
 
 ### How to use clymene-promtail Docker-compose
