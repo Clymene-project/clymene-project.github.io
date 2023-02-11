@@ -17,21 +17,21 @@
 &lt;h3 id="4-query-execution">4. query execution&lt;/h3>
 &lt;p>&lt;img src="https://user-images.githubusercontent.com/25188468/214284893-2a444d50-144e-4716-9972-2c87d759bdd0.png" alt="image">&lt;/p></description></item><item><title>Docs: clymene-gateway Options</title><link>/docs/database-options/gateway/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/gateway/</guid><description>
 &lt;h3 id="clymene-gateway-options">clymene-gateway Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code> --gateway.grpc.discovery.min-peers int Max number of collectors to which the agent will try to connect at any given time (default 3)
---gateway.grpc.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;#34;localhost:15610&amp;#34;)
---gateway.grpc.retry.max uint Sets the maximum number of retries for a call (default 3)
---gateway.grpc.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
---gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
---gateway.grpc.tls.enabled Enable TLS when talking to the remote server(s)
---gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
---gateway.grpc.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
---gateway.grpc.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
---gateway.http.logs.url string the clymene-gateway logs write HTTP receiver endpoint(/api/logs) (default &amp;#34;http://localhost:15611/api/logs&amp;#34;)
---gateway.http.max-err-msg-len int Maximum length of error message (default 256)
---gateway.http.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
---gateway.http.url string the clymene-gateway remote write HTTP receiver endpoint(/api/metrics) (default &amp;#34;http://localhost:15611/api/metrics&amp;#34;)
---gateway.http.user.agent string User-Agent in request header (default &amp;#34;Clymene/&amp;#34;)
---gateway.service-type string gateway service type(grpc or http) (default &amp;#34;grpc&amp;#34;)
+&lt;pre tabindex="0">&lt;code> --gateway.grpc-client.discovery.min-peers int Max number of collectors to which the agent will try to connect at any given time (default 3)
+--gateway.grpc-client.host-port string Comma-separated string representing host:port of a static list of gateways to connect to directly (default &amp;#34;localhost:15610&amp;#34;)
+--gateway.grpc-client.retry.max uint Sets the maximum number of retries for a call (default 3)
+--gateway.grpc-client.tls.ca string Path to a TLS CA (Certification Authority) file used to verify the remote server(s) (by default will use the system truststore)
+--gateway.grpc-client.tls.cert string Path to a TLS Certificate file, used to identify this process to the remote server(s)
+--gateway.grpc-client.tls.enabled Enable TLS when talking to the remote server(s)
+--gateway.grpc-client.tls.key string Path to a TLS Private Key file, used to identify this process to the remote server(s)
+--gateway.grpc-client.tls.server-name string Override the TLS server name we expect in the certificate of the remote server(s)
+--gateway.grpc-client.tls.skip-host-verify (insecure) Skip server&amp;#39;s certificate chain and host name verification
+--gateway.http-client.logs.url string the clymene-gateway logs write HTTP receiver endpoint(/api/logs) (default &amp;#34;http://localhost:15611/api/logs&amp;#34;)
+--gateway.http-client.max-err-msg-len int Maximum length of error message (default 256)
+--gateway.http-client.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
+--gateway.http-client.url string the clymene-gateway remote write HTTP receiver endpoint(/api/metrics) (default &amp;#34;http://localhost:15611/api/metrics&amp;#34;)
+--gateway.http-client.user.agent string User-Agent in request header (default &amp;#34;Clymene/&amp;#34;)
+--gateway.service-type string Setting the type of gateway server (grpc or http) (default &amp;#34;grpc&amp;#34;)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Cortex Options</title><link>/docs/database-options/cortex/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/cortex/</guid><description>
 &lt;h3 id="cortex-options">Cortex Options&lt;/h3>
 &lt;pre tabindex="0">&lt;code>--cortex.distributor.kafka.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
@@ -163,14 +163,7 @@
 --opentsdb.timeout duration Time out when doing http insert(sec, default 10 sec) (default 10s)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Prometheus Options</title><link>/docs/database-options/prometheus/</link><pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/database-options/prometheus/</guid><description>
 &lt;h3 id="prometheus-options">Prometheus Options&lt;/h3>
-&lt;pre tabindex="0">&lt;code>--admin.http.host-ports string The host:ports (e.g. 127.0.0.1:15690 or :15690) for the admin server, including health check, /metrics, etc. (default &amp;#34;:15690&amp;#34;)
---gateway.grpc-server.host-port string The host:port (e.g. 127.0.0.1:15610 or :15610) of the gateway&amp;#39;s GRPC server (default &amp;#34;:15610&amp;#34;)
---gateway.grpc.tls.cert string Path to a TLS Certificate file, used to identify this server to clients
---gateway.grpc.tls.client-ca string Path to a TLS CA (Certification Authority) file used to verify certificates presented by clients (if unset, all clients are permitted)
---gateway.grpc.tls.enabled Enable TLS on the server
---gateway.grpc.tls.key string Path to a TLS Private Key file, used to identify this server to clients
---log-level string Minimal allowed log Level. For more levels see https://github.com/uber-go/zap (default &amp;#34;info&amp;#34;)
---prometheus.remote.kafka.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
+&lt;pre tabindex="0">&lt;code>--prometheus.remote.kafka.encoding string Encoding of metric (&amp;#34;json&amp;#34; or &amp;#34;protobuf&amp;#34;) sent to kafka. (default &amp;#34;protobuf&amp;#34;)
 --prometheus.remote.max.err.msg.len int Maximum length of error message (default 256)
 --prometheus.remote.timeout duration Time out when doing remote write(sec, default 10 sec) (default 10s)
 --prometheus.remote.url string the prometheus remote write receiver endpoint(/api/v1/write) (default &amp;#34;http://localhost:9090/api/v1/write&amp;#34;)
