@@ -1,4 +1,15 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Clymene-project</title><link>/</link><description>Recent content on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.2.2 (2023-02-11)</title><link>/blog/2023/02/11/2.2.2-2023-02-11/</link><pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate><guid>/blog/2023/02/11/2.2.2-2023-02-11/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clymene-project – Clymene-project</title><link>/</link><description>Recent content on Clymene-project</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.2.3 (2023-02-18)</title><link>/blog/2023/02/18/2.2.3-2023-02-18/</link><pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate><guid>/blog/2023/02/18/2.2.3-2023-02-18/</guid><description>
+&lt;h2 id="whats-changed">What&amp;rsquo;s Changed&lt;/h2>
+&lt;ul>
+&lt;li>Release/v2.2.2 by @bourbonkk in &lt;a href="https://github.com/Clymene-project/Clymene/pull/89">https://github.com/Clymene-project/Clymene/pull/89&lt;/a>&lt;/li>
+&lt;li>Bump github.com/prometheus/client_golang from 1.11.0 to 1.11.1 by @dependabot in &lt;a href="https://github.com/Clymene-project/Clymene/pull/91">https://github.com/Clymene-project/Clymene/pull/91&lt;/a>&lt;/li>
+&lt;li>Bump github.com/containerd/containerd from 1.5.9 to 1.5.18 by @dependabot in &lt;a href="https://github.com/Clymene-project/Clymene/pull/92">https://github.com/Clymene-project/Clymene/pull/92&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="new-contributors">New Contributors&lt;/h2>
+&lt;ul>
+&lt;li>@dependabot made their first contribution in &lt;a href="https://github.com/Clymene-project/Clymene/pull/91">https://github.com/Clymene-project/Clymene/pull/91&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Full Changelog&lt;/strong>: &lt;a href="https://github.com/Clymene-project/Clymene/compare/v2.2.2...v2.2.3">https://github.com/Clymene-project/Clymene/compare/v2.2.2...v2.2.3&lt;/a>&lt;/p></description></item><item><title>Blog: 2.2.2 (2023-02-11)</title><link>/blog/2023/02/11/2.2.2-2023-02-11/</link><pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate><guid>/blog/2023/02/11/2.2.2-2023-02-11/</guid><description>
 &lt;h2 id="whats-changed">What&amp;rsquo;s Changed&lt;/h2>
 &lt;ul>
 &lt;li>[HOTFIX] Separation of grpc, http server/client options of gateway component &lt;a href="https://github.com/Clymene-project/Clymene/issues/88">https://github.com/Clymene-project/Clymene/issues/88&lt;/a> by @bourbonkk in &lt;a href="https://github.com/Clymene-project/Clymene/pull/89">https://github.com/Clymene-project/Clymene/pull/89&lt;/a>&lt;/li>
